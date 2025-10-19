@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>SRI GURU CONSTRUCTIONS</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Enhanced Index Page Styles -->
+  <style>
+    /* Premium Hero Section */
+    #hero {
+      position: relative;
+      background: linear-gradient(135deg, rgba(255, 107, 53, 0.9) 0%, rgba(247, 147, 30, 0.8) 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="white" opacity="0.05"><circle cx="100" cy="100" r="50"/><circle cx="300" cy="300" r="30"/><circle cx="700" cy="200" r="40"/><circle cx="500" cy="600" r="35"/><circle cx="800" cy="800" r="45"/></svg>') repeat;
+      animation: float 20s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(180deg); }
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      color: white;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .hero-content h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+      letter-spacing: -1px;
+      line-height: 1.1;
+      background: linear-gradient(45deg, #fff, #f0f8ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: titleGlow 3s ease-in-out infinite alternate;
+    }
+    
+    @keyframes titleGlow {
+      0% { filter: drop-shadow(0 0 20px rgba(255,255,255,0.3)); }
+      100% { filter: drop-shadow(0 0 40px rgba(255,255,255,0.7)); }
+    }
+    
+    .hero-content .subtitle {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: 30px;
+      opacity: 0.95;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 30px 0;
+    }
+    
+    .hero-badge {
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    
+    .hero-badge:nth-child(1) {
+      background: rgba(255, 204, 0, 0.9);
+      color: #333;
+    }
+    
+    .hero-badge:nth-child(2) {
+      background: rgba(230, 57, 70, 0.9);
+      color: white;
+    }
+    
+    .hero-badge:nth-child(3) {
+      background: rgba(69, 123, 157, 0.9);
+      color: white;
+    }
+    
+    .hero-badge:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    
+    .btn-get-started {
+      display: inline-block;
+      padding: 18px 40px;
+      margin-top: 30px;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: 3px solid white;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+    
+    .btn-get-started::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: white;
+      transition: left 0.4s ease;
+      z-index: -1;
+    }
+    
+    .btn-get-started:hover::before {
+      left: 0;
+    }
+    
+    .btn-get-started:hover {
+      color: #FF6B35;
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    
+    /* Enhanced Carousel */
+    #hero-carousel {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    
+    .carousel-item {
+      width: 100%;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    
+    .carousel-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.3);
+      z-index: 2;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      top: 50%;
+      transform: translateY(-50%);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255,255,255,0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+      background: rgba(255,255,255,0.3);
+      transform: translateY(-50%) scale(1.1);
+    }
+    
+    /* Enhanced Who We Are Section */
+    .who-we-are {
+      padding: 120px 0;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      position: relative;
+    }
+    
+    .who-we-are::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle at 25% 25%, rgba(255, 107, 53, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(247, 147, 30, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    
+    .who-we-are .section-title h2 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #2C3E50;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .who-we-are .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(90deg, #FF6B35, #F7931E);
+      border-radius: 2px;
+    }
+    
+    .who-we-are .lead {
+      font-size: 1.4rem;
+      color: #FF6B35;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 25px;
+    }
+    
+    .who-we-are .quote {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #6c757d;
+    }
+    
+    /* Projects Section Enhancement */
+    #projects {
+      padding: 120px 0;
+      background: #ffffff;
+    }
+    
+    #projects .section-header h2 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #2C3E50;
+      text-align: center;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+    
+    #projects .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(90deg, #FF6B35, #F7931E);
+      border-radius: 2px;
+    }
+    
+    .portfolio-flters {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+    }
+    
+    .portfolio-flters li {
+      background: #f8f9fa;
+      color: #6c757d;
+      padding: 12px 30px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 2px solid transparent;
+    }
+    
+    .portfolio-flters li:hover,
+    .portfolio-flters li.filter-active {
+      background: linear-gradient(135deg, #FF6B35, #F7931E);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+    }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero-badges {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .who-we-are .section-title h2,
+      #projects .section-header h2 {
+        font-size: 2.5rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      
+      .btn-get-started {
+        padding: 15px 30px;
+        font-size: 1rem;
+      }
+    }
+
+    /* Contact Form Notification Popup */
+    .contact-notification {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(15px);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+      max-width: 450px;
+      width: 90%;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .contact-notification.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .notification-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 9998;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .notification-overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .notification-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .notification-close {
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: #999;
+      cursor: pointer;
+      padding: 5px;
+      transition: color 0.3s ease;
+    }
+
+    .notification-close:hover {
+      color: #FF6B35;
+    }
+
+    .contact-notification h3 {
+      color: #FF6B35;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .contact-notification .notification-subtitle {
+      color: #666;
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
+
+    .contact-notification .form-group {
+      margin-bottom: 18px;
+    }
+
+    .contact-notification input,
+    .contact-notification select,
+    .contact-notification textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      background: white;
+    }
+
+    .contact-notification input:focus,
+    .contact-notification select:focus,
+    .contact-notification textarea:focus {
+      outline: none;
+      border-color: #FF6B35;
+      box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+    }
+
+    .contact-notification textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    .notification-form-submit {
+      width: 100%;
+      background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+      border: none;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .notification-form-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+    }
+
+    .notification-dismiss {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .notification-dismiss button {
+      background: none;
+      border: none;
+      color: #999;
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .notification-dismiss button:hover {
+      color: #666;
+    }
+
+    /* Mobile responsiveness for notification */
+    @media (max-width: 768px) {
+      .contact-notification {
+        padding: 25px;
+        max-width: 95%;
+      }
+      
+      .contact-notification h3 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: UpConstruction - v1.3.0
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="images/logo.jpg" alt="">
+        <h1>SRI GURU CONSTRUCTIONS<span>.</span></h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown"><a href="#"><span>Services</span> <i
+                class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a class="dropdown-item" href="interior.html"><i class="bi bi-house-door"></i>Interior Design</a></li>
+              <li><a class="dropdown-item" href="exterior.html"><i class="bi bi-building"></i>Exterior Design</a></li>
+              <li><a class="dropdown-item" href="pre-design.html"><i class="bi bi-pencil-square"></i>Pre Design</a></li>
+              <li><a class="dropdown-item" href="residential.html"><i class="bi bi-house-heart"></i>Residential</a></li>
+              <li><a class="dropdown-item" href="commercial.html"><i class="bi bi-buildings"></i>Commercial</a></li>
+              <li><a class="dropdown-item" href="renovation.html"><i class="bi bi-tools"></i>Renovation</a></li>
+              <li><a class="dropdown-item" href="consultation.html"><i class="bi bi-chat-dots"></i>Consultation</a></li>
+            </ul>
+          </li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="blog.html">FAQ's</a></li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+              <a class="nav-link btn btn-primary text-white" href="#">Let's Start</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="tel:+91 7795 444 954" style="color: white; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);"><i class="fas fa-phone-alt"></i> +91 7795 444 954</a>
+          </li>
+      </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- Contact Notification Popup -->
+  <div class="notification-overlay" id="notificationOverlay"></div>
+  <div class="contact-notification" id="contactNotification">
+    <div class="notification-header">
+      <h3><i class="fas fa-rocket"></i> Start Your Project!</h3>
+      <button class="notification-close" id="closeNotification">&times;</button>
+    </div>
+    
+    <p class="notification-subtitle">Get a free quote for your dream construction project!</p>
+    
+    <form action="forms/contact.php" method="post" class="notification-contact-form">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your Full Name" required>
+      </div>
+      
+      <div class="form-group">
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+      </div>
+      
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Email Address" required>
+      </div>
+      
+      <div class="form-group">
+        <select name="project_type" required>
+          <option value="">Select Project Type</option>
+          <option value="residential">Residential Construction</option>
+          <option value="commercial">Commercial Building</option>
+          <option value="interior">Interior Design</option>
+          <option value="exterior">Exterior Design</option>
+          <option value="renovation">Renovation</option>
+          <option value="consultation">Consultation</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <textarea name="message" placeholder="Brief project description..." rows="3"></textarea>
+      </div>
+      
+      <button type="submit" class="notification-form-submit">
+        <i class="fas fa-paper-plane"></i> Get Free Quote
+      </button>
+    </form>
+    
+    <div class="notification-dismiss">
+      <button type="button" id="dismissNotification">Maybe later</button>
+    </div>
+  </div>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>SRI GURU CONSTRUCTIONS</h1>
+      <p class="subtitle">Building Dreams Into Reality</p>
+      <div class="hero-badges">
+        <div class="hero-badge">Innovative Designs</div>
+        <div class="hero-badge">Quality Assured</div>
+        <div class="hero-badge">Expert Craftsmanship</div>
+      </div>
+      <a href="#get-started" class="btn-get-started">Start Your Project</a>
+    </div>
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/hero-carousel-1.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-2.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-3.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-4.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-5.jpg)"></div>
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+    </div>
+  </section><!-- End Hero Section -->
+
+  <!-- ======= Who We Are Section ======= -->
+  <!-- ======= Who We Are Section ======= -->
+  <section class="who-we-are">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.5s">
+          <img src="images/who_are_we.png" alt="About Us" class="img-fluid rounded">
+        </div>
+        <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.5s">
+          <div class="section-title">
+            <h2>Who We Are</h2>
+            <p>Building Dreams, Brick by Brick</p>
+          </div>
+          <p class="lead">"We're not just builders, we're dreamers. We're passionate about creating structures that inspire and uplift."</p>
+          <p class="quote">Our goal is to deliver exceptional projects that exceed our clients' expectations. We're committed to quality, innovation, and customer satisfaction</p>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check"></i> Experienced Team</li>
+                <li><i class="fas fa-check"></i> Quality Materials</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check"></i> Client-Focused Approach</li>
+                <li><i class="fas fa-check"></i> Timely Completion</li>
+              </ul>
+            </div>
+          </div>
+          <button class="btn btn-primary">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-header">
+        <h2>Our Services</h2>
+        <p>Flawless construction powered by deep expertise.</p>
+      </div>
+
+      <div class="row gy-4">
+        <div class="container">
+          <div class="service-grid">
+              <a href="pre-design.html" class="service-item">
+                  <img src="images/pre_design.jpg" alt="Pre-Design">
+                  <h3>Pre-Design</h3>
+              </a>
+              <a href="interior.html" class="service-item">
+                  <img src="images/interior_design.jpg" alt="Interior Design">
+                  <h3>Interior Design</h3>
+              </a>
+              <a href="exterior.html" class="service-item">
+                  <img src="images/exterior_design.jpg" alt="Exterior Design">
+                  <h3>Exterior Design</h3>
+              </a>
+              <a href="furniture.html" class="service-item">
+                  <img src="images/furniture.jpg" alt="Furniture">
+                  <h3>Furniture</h3>
+              </a>
+              <a href="residential.html" class="service-item">
+                  <img src="images/Residential.jpg" alt="Residential">
+                  <h3>Residential</h3>
+              </a>
+              <a href="commercial.html" class="service-item">
+                  <img src="images/commercial.jpg" alt="Commercial">
+                  <h3>Commercial</h3>
+              </a>
+              <a href="renovation.html" class="service-item">
+                  <img src="images/Renovation.jpg" alt="Renovation">
+                  <h3>Renovation</h3>
+              </a>
+              <a href="consultation.html" class="service-item">
+                  <img src="images/consultation.jpg" alt="Consultation">
+                  <h3>Consultation</h3>
+              </a>
+          </div>
+      </div>
+    </div><!-- End Service Item -->
+  </section>
+
+    <!-- Why Choose Us Section -->
+    <div class="why-choose-us">
+      <h2>Why Choose Us?</h2>
+      <p>We ensure peace of mind, trust, and transparent house construction.</p>
+      <div class="choose-us-cards">
+          <div class="choose-us-card">
+              <img src="https://grandjyothiconstruction.com/wp-content/uploads/2023/10/100-Vaastu-Homes.png" alt="100% Vaastu Homes">
+              <h3>100% Vaastu Homes</h3>
+              <p>Dream spaces built to be 100% Vaastu compatible.</p>
+          </div>
+          <div class="choose-us-card">
+              <img src="https://grandjyothiconstruction.com/wp-content/uploads/2023/10/Budget-Friendly.png" alt="Budget Friendly">
+              <h3>Budget Friendly</h3>
+              <p>Delivering quality constructions that respect your budget.</p>
+          </div>
+          <div class="choose-us-card">
+              <img src="https://grandjyothiconstruction.com/wp-content/uploads/2023/10/On-Time-Delivery.png" alt="On-Time Delivery">
+              <h3>On-Time Delivery</h3>
+              <p>Your dream home, delivered when promised.</p>
+          </div>
+          <div class="choose-us-card">
+              <img src="https://grandjyothiconstruction.com/wp-content/uploads/2023/10/100-Quality-construction.png" alt="100% Quality Construction">
+              <h3>100% Quality Construction</h3>
+              <p>Building high-quality spaces that meet all standards.</p>
+          </div>
+      </div> 
+
+  <!-- how-to-start -->
+  <section class="how-to-start-section">
+    <h2>How to Start</h2>
+    <p>Follow these four simple steps to get started on your journey with our platform and make the most of the opportunities available.</p>
+    <div class="steps-container" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
+        <div class="step" style="margin: 20px; text-align: center; flex: 1 1 200px;">
+            <div class="step-icon">📅</div>
+            <h3>Step 1: Book an Appointment</h3>
+            <p>Schedule a Consultation with Our Architectural and Engineering Visionaries.</p>
+        </div>
+        <div class="step" style="margin: 20px; text-align: center; flex: 1 1 200px;">
+            <div class="step-icon">💬</div>
+            <h3>Step 2: Discuss Your Project</h3>
+            <p>Design Your Dreams - Let's Talk Blueprint, Requirement, Site condition, and others.</p>
+        </div>
+        <div class="step" style="margin: 20px; text-align: center; flex: 1 1 200px;">
+            <div class="step-icon">💰</div>
+            <h3>Step 3: Get Budgetary Quote</h3>
+            <p>Your Vision, Your Budget - Explore the Financial Blueprint and Discover the Cost.</p>
+        </div>
+        <div class="step" style="margin: 20px; text-align: center; flex: 1 1 200px;">
+            <div class="step-icon">🔨</div>
+            <h3>Step 4: Start Your Project</h3>
+            <p>Laying the Foundation of Your Dreams - Let's Begin Building.</p>
+        </div>
+      </div>
+  </section>      
+
+  <!-- ======= Our Projects Section ======= -->
+  <section id="projects" class="projects">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>Our Projects</h2>
+        <p class="quote">"Discover our exceptional portfolio, showcasing both ongoing and completed projects that reflect our dedication to quality and innovation in construction. From stunning remodels to landmark structures, we bring visions to life with precision and craftsmanship."</p>
+      </div>
+      <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">ALL</li>
+            <li data-filter=".filter-remodeling">Ongoing-Projects</li>
+            <li data-filter=".filter-construction">Completed-Projects</li>
+          </ul>
+        </div>
+        <!-- Portfolio Item 1 -->
+        <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
+          <div class="portfolio-content h-100">
+            <div class="project-image">
+              <div class="carousel">
+                <img src="images/CONSTRUCTION_1/1.1.jpg" class="img-fluid" alt="">
+                <img src="images/CONSTRUCTION_1/2.2.jpg" class="img-fluid" alt="">
+                <img src="images/CONSTRUCTION_1/3.jpg" class="img-fluid" alt="">
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <p><strong>Client:</strong> John Doe</p>
+              <p><strong>Site Dimension:</strong> 50*30</p>
+              <p><strong>Category:</strong> 4 BHK Luxury house</p>
+              <p><strong>Location:</strong> Bellary,Karnataka</p>
+              <a href="assets/img/projects/remodeling-1.jpg" title="Remodeling 1" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Item 2 -->
+        <div class="col-lg-4 col-md-6 portfolio-item filter-construction">
+          <div class="portfolio-content h-100">
+            <div class="project-image">
+              <div class="carousel">
+                <img src="images/CONSTRUCTION_2/1.jpg" class="img-fluid" alt="">
+                <img src="images/CONSTRUCTION_2/2.jpg" class="img-fluid" alt="">
+                <img src="images/CONSTRUCTION_2/WhatsApp Image 2024-12-30 at 21.10.13_81c2aa2b.jpg" class="img-fluid" alt="">
+                <img src="images/CONSTRUCTION_2/WhatsApp Image 2024-12-30 at 21.10.13_f0540816.jpg" class="img-fluid" alt="">
+                <img src="images/CONSTRUCTION_2/WhatsApp Image 2024-12-30 at 21.10.14_5f0226e3.jpg" class="img-fluid" alt="">
+                <img src="images/CONSTRUCTION_2/WhatsApp Image 2024-12-30 at 21.10.14_871a931d.jpg" class="img-fluid" alt="">
+                <img src="images/CONSTRUCTION_2/WhatsApp Image 2024-12-30 at 21.10.14_8d392448.jpg" class="img-fluid" alt="">
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h4>Construction 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <p><strong>Client:</strong> Jane Doe</p>
+              <p><strong>Location:</strong> Los Angeles, USA</p>
+              <p><strong>Category:</strong> Construction</p>
+              <a href="images/CONSTRUCTION_2/1.jpg" title="Construction 1" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Item 3 -->
+        <div class="col-lg-4 col-md-6 portfolio-item filter-repairs">
+          <div class="portfolio-content h-100">
+            <div class="project-image">
+              <div class="carousel">
+                <img src="images/CONSTRUCTION_3/1.png" class="img-fluid" alt="">
+                <img src="images/CONSTRUCTION_3/2.jpg" class="img-fluid" alt="">
+                <img src="images/CONSTRUCTION_3/3.jpg" class="img-fluid" alt="">
+                <img src="images/CONSTRUCTION_3/4.jpg" class="img-fluid" alt="">
+                <img src="images/CONSTRUCTION_3/5.jpg" class="img-fluid" alt="">
+                <img src="images/CONSTRUCTION_3/6.jpg" class="img-fluid" alt="">
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h4>Construction 3</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <p><strong>Client:</strong> Bob Smith</p>
+              <p><strong>Location:</strong> Chicago, USA</p>
+              <p><strong>Category:</strong> Repairs</p>
+              <a href="images/CONSTRUCTION_3/1.png" title="Repairs 1" data-gallery="portfolio-gallery-repairs" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Item 4 -->
+        <div class="col-lg-4 col-md-6 portfolio-item filter-design">
+          <div class="portfolio-content h-100">
+            <div class="project-image">
+              <div class="carousel">
+                <img src="assets/img/projects/design-1.jpg" class="img-fluid" alt="">
+                <img src="assets/img/projects/design-2.jpg" class="img-fluid" alt="">
+                <img src="assets/img/projects/design-3.jpg" class="img-fluid" alt="">
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h4>Design 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <p><strong>Client:</strong> Alice Johnson</p>
+              <p><strong>Location:</strong> San Francisco, USA</p>
+              <p><strong>Category:</strong> Design</p>
+              <a href="assets/img/projects/design-1.jpg" title="Design 1" data-gallery="portfolio-gallery-design" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Item 5 -->
+        <div class="col-lg-4 col-md-6 portfolio-item filter-consultation">
+          <div class="portfolio-content h-100">
+            <div class="project-image">
+              <div class="carousel">
+                <img src="images/exterior_design.jpg" class="img-fluid" alt="">
+                <img src="images/commercial.jpg" class="img-fluid" alt="">
+                <img src="images/facade-modern-house.jpg" class="img-fluid" alt="">
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h4>Consultation 1</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <p><strong>Client:</strong> Mike Brown</p>
+              <p><strong>Location:</strong> New York, USA</p>
+              <p><strong>Category:</strong> Consultation</p>
+              <a href="assets/img/projects/consultation-1.jpg" title="Consultation 1" data-gallery="portfolio-gallery-consultation" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Item 6 -->
+        <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
+          <div class="portfolio-content h-100">
+            <div class="project-image">
+              <div class="carousel">
+                <img src="assets/img/projects/remodeling-2.jpg" class="img-fluid" alt="">
+                <img src="assets/img/projects/remodeling-3.jpg" class="img-fluid" alt="">
+                <img src="assets/img/projects/remodeling-4.jpg" class="img-fluid" alt="">
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h4>Remodeling 2</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur</p>
+              <p><strong>Client:</strong> Sarah Lee</p>
+              <p><strong>Location:</strong> Miami, USA</p>
+              <p><strong>Category:</strong> Remodeling</p>
+              <a href="assets/img/projects/remodeling-2.jpg" title="Remodeling 2" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Stats Counter Section ======= -->
+  <section id="stats-counter" class="stats-counter section-bg">
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item d-flex align-items-center w-100 h-100">
+            <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Happy Clients</p>
+            </div>
+        </div>
+      </div><!-- End Stats Item -->
+  </section>      
+
+  <!-- ======= Testimonials Section ======= -->
+  <section id="testimonials" class="testimonials section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-header">
+        <h2>Testimonials</h2>
+        <p class="quote">"See what our clients are saying! Their experiences speak volumes about our commitment to excellence and customer satisfaction. Join the growing list of satisfied customers who have transformed their visions into reality with our expert guidance and quality craftsmanship."</p>
+      </div>
+
+      <div class="slides-2 swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
+                  Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
+                  quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
+                  tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  We were impressed with the quality of work and the attention to detail that SRI GURU CONSTRUCTIONS provided for our commercial project. 
+                  Their team was responsive, communicated clearly, and always went the extra mile to ensure our satisfaction
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  SRI GURU CONSTRUCTIONS exceeded my expectations! Their team was professional, efficient, and incredibly helpful throughout the entire process. 
+                  I highly recommend them to anyone looking for a reliable and trustworthy construction company.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+  </section><!-- End Testimonials Section -->
+  
+  <!-- Brand Section -->
+  <section class="brands-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="text-muted">Using quality and guaranteed materials from top brands in Construction and Interiors industry</p>
+                <div class="brand-logos">
+                    <img src="images/ultretech.png" alt="UltraTech">
+                    <img src="images/jaguar.png" alt="Jaquar">
+                    <img src="images/jsw.png" alt="JSW">
+                    <img src="images/ashirvad.png" alt="ashirvad">
+                    <img src="images/asianpaints.png" alt="asianpaints">
+                    <img src="images/greenlam.png" alt="Greenlam">
+                    <img src="images/greenply.png" alt="Greenply">
+                    <img src="images/hettich.png" alt="Hettich">
+                    <img src="images/havells.png" alt="Havells">
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  <!-- YouTube Video, Map, and Contact Section -->
+  <section class="youtube-video-map-contact">
+    <div class="container">
+        <div class="row align-items-center text-center">
+            <div class="col-md-4">
+                <div class="contact-details">
+                    <h2>Contact Us</h2>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Construction St, City</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91 7795 444 954</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@srigurunstructions.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map"></i>
+                        <span><a href="https://www.google.com/maps/place/Your+Location" target="_blank">View on Map</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509254!2d144.9537353153159!3d-37.81627997975114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f0c1e2d%3A0xb7b4f5b2a367fbc9!2sYour+Location!5e0!3m2!1sen!2sus!4v1616161616161!5m2!1sen!2sus" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="video-container">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- ======= Recent Blog Posts Section ======= -->
+  <section id="recent-blog-posts" class="recent-blog-posts">
+    <div class="container" data-aos="fade-up">
+    
+  <div class=" section-header">
+        <h2>Recent Blog Posts</h2>
+        <p>In commodi voluptatem excepturi quaerat nihil error autem voluptate ut et officia consequuntu</p>
+      </div>
+
+      <div class="row gy-5">
+
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="post-item position-relative h-100">
+
+            <div class="post-img position-relative overflow-hidden">
+              <img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt="">
+              <span class="post-date">December 12</span>
+            </div>
+
+            <div class="post-content d-flex flex-column">
+
+              <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis</h3>
+
+              <div class="meta d-flex align-items-center">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
+                </div>
+                <span class="px-3 text-black-50">/</span>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
+                </div>
+              </div>
+
+              <hr>
+
+              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
+                  class="bi bi-arrow-right"></i></a>
+
+            </div>
+
+          </div>
+        </div><!-- End post item -->
+
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="post-item position-relative h-100">
+
+            <div class="post-img position-relative overflow-hidden">
+              <img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="">
+              <span class="post-date">July 17</span>
+            </div>
+
+            <div class="post-content d-flex flex-column">
+
+              <h3 class="post-title">Et repellendus molestiae qui est sed omnis</h3>
+
+              <div class="meta d-flex align-items-center">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-person"></i> <span class="ps-2">Mario Douglas</span>
+                </div>
+                <span class="px-3 text-black-50">/</span>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
+                </div>
+              </div>
+
+              <hr>
+
+              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
+                  class="bi bi-arrow-right"></i></a>
+
+            </div>
+
+          </div>
+        </div><!-- End post item -->
+
+        <div class="col-xl-4 col-md-6">
+          <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="post-img position-relative overflow-hidden">
+              <img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="">
+              <span class="post-date">September 05</span>
+            </div>
+
+            <div class="post-content d-flex flex-column">
+
+              <h3 class="post-title">Quia assumenda est et veritati tirana ploder</h3>
+
+              <div class="meta d-flex align-items-center">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-person"></i> <span class="ps-2">Lisa Hunter</span>
+                </div>
+                <span class="px-3 text-black-50">/</span>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
+                </div>
+              </div>
+
+              <hr>
+
+              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
+                  class="bi bi-arrow-right"></i></a>
+
+            </div>
+
+          </div>
+        </div><!-- End post item -->
+
+      </div>
+
+      </div>
+    </section>
+    <!-- End Recent Blog Posts Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>SRI GURU CONSTRUCTIONS</h3>
+              <p>
+                Bellary <br>
+                Karnataka,583101<br><br>
+                <strong>Phone:</strong> +91 7795 444 954<br>
+                <strong>Email:</strong> srigurunstructions@gmail.com<br>
+              </p>
+              <div class="social-links d-flex mt-3">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End footer info column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">Pre-Design</a></li>
+              <li><a href="interior.html">Interior Design</a></li>
+              <li><a href="exterior.html">Exterior Design</a></li>
+              <li><a href="#">Furniture</a></li>
+              <li><a href="#">Residential</a></li>
+              <li><a href="#">Commercial</a></li>
+              <li><a href="#">Renovation</a></li>
+              <li><a href="#">Consultation</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Projects</h4>
+            <ul>
+              <li><a href="residential.html">Residential</a></li>
+              <li><a href="commercial.html">Commercial</a></li>
+              <li><a href="renovation.html">Renovation</a></li>
+              <li><a href="projects.html">All Projects</a></li>
+              <li><a href="project-details.html">Project Details</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="consultation.html">Consultation</a></li>
+              <li><a href="contact.html">Get Quote</a></li>
+              <li><a href="#">Customer Support</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Help Center</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="whatsapp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>SRI GURU CONSTRUCTIONS</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/ -->
+          Designed by <a href="https://bootstrapmade.com/"></a> Distributed by <a></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Get the header element
+    const header = document.getElementById('header');
+
+    // Add an event listener to the window's scroll event
+    window.addEventListener('scroll', () => {
+      // Check if the window has scrolled down
+      if (window.scrollY > 100) {
+        // Add the 'scrolled' class to the header
+        header.classList.add('scrolled');
+      } else {
+        // Remove the 'scrolled' class from the header
+        header.classList.remove('scrolled');
+      }
+    });
+    
+    
+    const carousels = document.querySelectorAll('.carousel');
+
+    carousels.forEach(carousel => {
+      let index = 0;
+      const images = carousel.querySelectorAll('img');
+      
+      function showNextImage() {
+        index = (index + 1) % images.length; // Loop back to the first image
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      setInterval(showNextImage, 2000); // Change image every 3 seconds
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const mobileNavShow = document.querySelector('.mobile-nav-show');
+    const mobileNavHide = document.querySelector('.mobile-nav-hide');
+    const navbar = document.querySelector('.navbar');
+
+    mobileNavShow.addEventListener('click', function () {
+      navbar.classList.add('mobile-nav-active');
+    });
+
+    mobileNavHide.addEventListener('click', function () {
+      navbar.classList.remove('mobile-nav-active');
+    });
+
+    document.querySelectorAll('.navbar .dropdown > a').forEach(function (dropdown) {
+      dropdown.addEventListener('click', function (e) {
+        if (navbar.classList.contains('mobile-nav-active')) {
+          e.preventDefault();
+          this.nextElementSibling.classList.toggle('dropdown-active');
+        }
+      });
+
+      
+    });
+  });
+
+    // Contact Notification Popup functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const notification = document.getElementById('contactNotification');
+      const overlay = document.getElementById('notificationOverlay');
+      const closeBtn = document.getElementById('closeNotification');
+      const dismissBtn = document.getElementById('dismissNotification');
+
+      // Show notification after 2 seconds
+      setTimeout(function() {
+        showNotification();
+      }, 2000);
+
+      function showNotification() {
+        notification.classList.add('show');
+        overlay.classList.add('show');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      }
+
+      function hideNotification() {
+        notification.classList.remove('show');
+        overlay.classList.remove('show');
+        document.body.style.overflow = ''; // Restore scrolling
+      }
+
+      // Close button event
+      closeBtn.addEventListener('click', hideNotification);
+
+      // Dismiss button event
+      dismissBtn.addEventListener('click', hideNotification);
+
+      // Close when clicking overlay
+      overlay.addEventListener('click', hideNotification);
+
+      // Close with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && notification.classList.contains('show')) {
+          hideNotification();
+        }
+      });
+
+      // Prevent form from closing notification when submitted
+      const notificationForm = notification.querySelector('form');
+      notificationForm.addEventListener('submit', function(e) {
+        // You can add form submission logic here
+        // For now, just prevent default and show a message
+        e.preventDefault();
+        alert('Thank you! We will contact you soon.');
+        hideNotification();
+      });
+    });
+  </script>
+</body>
+</html>

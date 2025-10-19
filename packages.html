@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Construction Packages - SRI GURU CONSTRUCTIONS | Building Packages in Bellary</title>
+  <meta content="Explore our comprehensive construction packages designed for different budgets and requirements. From Gold to Luxury plans, find the perfect construction package for your dream home in Bellary, Karnataka." name="description">
+  <meta content="construction packages, building packages, home construction plans, Bellary construction, construction pricing, residential packages, commercial packages" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .breadcrumbs {
+      padding: 100px 0 40px 0;
+      background-color: rgba(255, 107, 53, 0.05);
+      min-height: auto;
+      margin-top: -80px;
+      padding-top: 160px;
+    }
+    
+    @media (max-width: 768px) {
+      .breadcrumbs {
+        margin-top: -70px;
+        padding-top: 140px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .breadcrumbs {
+        margin-top: -60px;
+        padding-top: 120px;
+      }
+    }
+    
+    .breadcrumbs h2 {
+      font-size: 28px;
+      font-weight: 300;
+      margin: 0;
+      color: #FF6B35;
+    }
+    
+    .breadcrumbs ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 14px;
+    }
+    
+    .breadcrumbs ol li {
+      display: inline-block;
+    }
+    
+    .breadcrumbs ol li + li {
+      padding-left: 10px;
+    }
+    
+    .breadcrumbs ol li + li::before {
+      display: inline-block;
+      padding-right: 10px;
+      color: #8894A4;
+      content: "/";
+    }
+    
+    .package-section {
+      padding: 80px 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: #2C3E50;
+      margin-bottom: 15px;
+    }
+    
+    .section-title p {
+      font-size: 1.1rem;
+      color: #7F8C8D;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .package-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+    
+    .package-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .package-card.featured {
+      border: 3px solid #FF6B35;
+      transform: scale(1.05);
+    }
+    
+    .package-card.featured .card-header {
+      background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    }
+    
+    .card-header {
+      background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+      color: white;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .package-badge {
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      background: #E74C3C;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 15px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    
+    .package-name {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    
+    .package-price {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+    
+    .package-price span {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+    
+    .package-subtitle {
+      opacity: 0.9;
+      font-size: 0.9rem;
+    }
+    
+    .card-body {
+      padding: 40px 30px;
+    }
+    
+    .features-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+    }
+    
+    .features-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid #ECF0F1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .features-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .feature-name {
+      color: #2C3E50;
+      font-weight: 500;
+    }
+    
+    .feature-icon {
+      color: #27AE60;
+      font-size: 1.2rem;
+    }
+    
+    .select-package-btn {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .select-package-btn:hover {
+      background: linear-gradient(135deg, #E55A2B 0%, #E8841A 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+    }
+    
+    .features-comparison {
+      background: #F8F9FA;
+      padding: 80px 0;
+    }
+    
+    .comparison-table {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .table-responsive {
+      border-radius: 15px;
+    }
+    
+    .comparison-table th {
+      background: #2C3E50;
+      color: white;
+      padding: 20px;
+      font-weight: 600;
+      border: none;
+    }
+    
+    .comparison-table td {
+      padding: 15px 20px;
+      border: none;
+      border-bottom: 1px solid #ECF0F1;
+    }
+    
+    .check-icon {
+      color: #27AE60;
+      font-size: 1.2rem;
+    }
+    
+    .premium-icon {
+      color: #F39C12;
+      font-size: 1.2rem;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+    
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .cta-section p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+    
+    .cta-btn {
+      background: #FF6B35;
+      color: white;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    
+    .cta-btn:hover {
+      background: #E55A2B;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+      color: white;
+    }
+    
+    @media (max-width: 768px) {
+      .package-hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .package-card.featured {
+        transform: none;
+      }
+      
+      .package-price {
+        font-size: 2rem;
+      }
+      
+      .comparison-table {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="images/logo.jpg" alt="">
+        <h1>Sri Guru Constructions<span>.</span></h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown"><a href="#"><span>Services</span> <i
+                class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a class="dropdown-item" href="interior.html">Interior Design</a></li>
+              <li><a class="dropdown-item" href="exterior.html">Exterior Design</a></li>
+              <li><a class="dropdown-item" href="pre-design.html">Pre Design</a></li>
+              <li><a class="dropdown-item" href="residential.html">Residential</a></li>
+              <li><a class="dropdown-item" href="commercial.html">Commercial</a></li>
+              <li><a class="dropdown-item" href="renovation.html">Renovation</a></li>
+              <li><a class="dropdown-item" href="consultation.html">Consultation</a></li>
+            </ul>
+          </li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="packages.html" class="active">Packages</a></li>
+          <li><a href="services.html">Materials</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="blog.html">FAQ's</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+        <h2>Construction Packages</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Packages</li>
+        </ol>
+        <p class="mt-3" style="color: #ffffff; font-size: 1.2rem; max-width: 700px; text-align: center; font-weight: 500; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); line-height: 1.6; background: rgba(0,0,0,0.3); padding: 15px 20px; border-radius: 10px; margin: 20px auto;">
+          Discover our comprehensive construction packages designed to meet every budget and requirement. From budget-friendly options to luxury builds, we have the perfect solution for your dream home.
+        </p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Packages Section ======= -->
+    <section class="package-section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Choose Your Perfect Package</h2>
+          <p>Each package is carefully crafted with premium materials and expert craftsmanship to ensure your home is built to the highest standards.</p>
+        </div>
+
+        <div class="row">
+          <!-- Gold Package -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="package-card">
+              <div class="card-header">
+                <div class="package-name">Gold Plan</div>
+                <div class="package-price">₹1,699<span>/sq ft</span></div>
+                <div class="package-subtitle">Perfect for budget-conscious families</div>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li><span class="feature-name">Architectural Design & Drawings</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Complete Structure Work</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Standard Flooring</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Door Frames & Standard Doors</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Standard Windows</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Interior & Exterior Painting</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Basic Electrical Work</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Standard Plumbing</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Basic Kitchen Setup</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Standard Bathroom Fittings</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Basic Miscellaneous Work</span> <i class="fas fa-check feature-icon"></i></li>
+                </ul>
+                <button class="select-package-btn" onclick="selectPackage('Gold Plan', '1699')">Select Gold Plan</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Platinum Package -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="package-card">
+              <div class="card-header">
+                <div class="package-name">Platinum Plan</div>
+                <div class="package-price">₹1,899<span>/sq ft</span></div>
+                <div class="package-subtitle">Enhanced features for modern living</div>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li><span class="feature-name">Premium Architectural Design</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Reinforced Structure Work</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Vitrified Tile Flooring</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Hardwood Door Frames & Doors</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">UPVC/Aluminum Windows</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Premium Paint (Asian/Berger)</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Concealed Electrical Wiring</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Premium Plumbing Fixtures</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Modular Kitchen Setup</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Designer Bathroom Fittings</span> <i class="fas fa-check feature-icon"></i></li>
+                  <li><span class="feature-name">Enhanced Miscellaneous Work</span> <i class="fas fa-check feature-icon"></i></li>
+                </ul>
+                <button class="select-package-btn" onclick="selectPackage('Platinum Plan', '1899')">Select Platinum Plan</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diamond Package -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="package-card featured">
+              <div class="package-badge">Most Popular</div>
+              <div class="card-header">
+                <div class="package-name">Diamond Plan</div>
+                <div class="package-price">₹2,099<span>/sq ft</span></div>
+                <div class="package-subtitle">Premium quality with luxury finishes</div>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li><span class="feature-name">Luxury Architectural Design</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Earthquake Resistant Structure</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Imported Marble/Granite Flooring</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Luxury Wooden Doors</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Designer Windows with Grills</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Luxury Paint with Texture</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Smart Home Electrical Setup</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Designer Plumbing with Geysers</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Premium Modular Kitchen</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Luxury Bathroom with Jacuzzi</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Premium Miscellaneous Work</span> <i class="fas fa-star premium-icon"></i></li>
+                </ul>
+                <button class="select-package-btn" onclick="selectPackage('Diamond Plan', '2099')">Select Diamond Plan</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diamond Plus Package -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="package-card">
+              <div class="card-header">
+                <div class="package-name">Diamond Plus Plan</div>
+                <div class="package-price">₹2,499<span>/sq ft</span></div>
+                <div class="package-subtitle">Ultra-luxury with smart features</div>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li><span class="feature-name">Architect-Supervised Design</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Reinforced Steel Structure</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Italian Marble Flooring</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Imported Wooden Doors</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Automatic Windows & Ventilation</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Textured Wall Paint & Wallpapers</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Home Automation System</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Premium Plumbing with RO System</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Designer Kitchen with Appliances</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Spa-Style Bathrooms</span> <i class="fas fa-star premium-icon"></i></li>
+                  <li><span class="feature-name">Luxury Miscellaneous Features</span> <i class="fas fa-star premium-icon"></i></li>
+                </ul>
+                <button class="select-package-btn" onclick="selectPackage('Diamond Plus Plan', '2499')">Select Diamond Plus</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Luxury Package -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="package-card">
+              <div class="card-header">
+                <div class="package-name">Luxury Plan</div>
+                <div class="package-price">₹3,099<span>/sq ft</span></div>
+                <div class="package-subtitle">Ultimate luxury and sophistication</div>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li><span class="feature-name">Celebrity Architect Design</span> <i class="fas fa-crown premium-icon"></i></li>
+                  <li><span class="feature-name">Premium Steel & Concrete Structure</span> <i class="fas fa-crown premium-icon"></i></li>
+                  <li><span class="feature-name">Imported Stone & Marble</span> <i class="fas fa-crown premium-icon"></i></li>
+                  <li><span class="feature-name">Luxury Imported Doors</span> <i class="fas fa-crown premium-icon"></i></li>
+                  <li><span class="feature-name">Smart Glass Windows</span> <i class="fas fa-crown premium-icon"></i></li>
+                  <li><span class="feature-name">Designer Wallpapers & Textures</span> <i class="fas fa-crown premium-icon"></i></li>
+                  <li><span class="feature-name">Complete Smart Home System</span> <i class="fas fa-crown premium-icon"></i></li>
+                  <li><span class="feature-name">Luxury Plumbing with Water Features</span> <i class="fas fa-crown premium-icon"></i></li>
+                  <li><span class="feature-name">Celebrity Chef Kitchen Design</span> <i class="fas fa-crown premium-icon"></i></li>
+                  <li><span class="feature-name">Resort-Style Bathrooms</span> <i class="fas fa-crown premium-icon"></i></li>
+                  <li><span class="feature-name">Complete Luxury Amenities</span> <i class="fas fa-crown premium-icon"></i></li>
+                </ul>
+                <button class="select-package-btn" onclick="selectPackage('Luxury Plan', '3099')">Select Luxury Plan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Features Comparison Section ======= -->
+    <section class="features-comparison">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Package Comparison</h2>
+          <p>Compare all features across our construction packages to make the best choice for your dream home.</p>
+        </div>
+
+        <div class="table-responsive" data-aos="fade-up" data-aos-delay="200">
+          <table class="table comparison-table">
+            <thead>
+              <tr>
+                <th>Features</th>
+                <th>Gold</th>
+                <th>Platinum</th>
+                <th>Diamond</th>
+                <th>Diamond Plus</th>
+                <th>Luxury</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Price per sq ft</strong></td>
+                <td>₹1,699</td>
+                <td>₹1,899</td>
+                <td>₹2,099</td>
+                <td>₹2,499</td>
+                <td>₹3,099</td>
+              </tr>
+              <tr>
+                <td>Architectural Design</td>
+                <td><i class="fas fa-check check-icon"></i></td>
+                <td><i class="fas fa-check check-icon"></i></td>
+                <td><i class="fas fa-star premium-icon"></i></td>
+                <td><i class="fas fa-star premium-icon"></i></td>
+                <td><i class="fas fa-crown premium-icon"></i></td>
+              </tr>
+              <tr>
+                <td>Structure Quality</td>
+                <td>Standard</td>
+                <td>Reinforced</td>
+                <td>Earthquake Resistant</td>
+                <td>Premium Steel</td>
+                <td>Luxury Grade</td>
+              </tr>
+              <tr>
+                <td>Flooring</td>
+                <td>Ceramic Tiles</td>
+                <td>Vitrified Tiles</td>
+                <td>Marble/Granite</td>
+                <td>Italian Marble</td>
+                <td>Imported Stone</td>
+              </tr>
+              <tr>
+                <td>Smart Home Features</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Basic</td>
+                <td>Advanced</td>
+                <td>Complete</td>
+              </tr>
+              <tr>
+                <td>Kitchen Type</td>
+                <td>Basic</td>
+                <td>Modular</td>
+                <td>Premium Modular</td>
+                <td>Designer</td>
+                <td>Celebrity Chef</td>
+              </tr>
+              <tr>
+                <td>Bathroom Features</td>
+                <td>Standard</td>
+                <td>Designer</td>
+                <td>Luxury with Jacuzzi</td>
+                <td>Spa-Style</td>
+                <td>Resort-Style</td>
+              </tr>
+              <tr>
+                <td>Warranty</td>
+                <td>2 Years</td>
+                <td>3 Years</td>
+                <td>5 Years</td>
+                <td>7 Years</td>
+                <td>10 Years</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= CTA Section ======= -->
+    <section class="cta-section">
+      <div class="container">
+        <h2 data-aos="fade-up">Ready to Build Your Dream Home?</h2>
+        <p data-aos="fade-up" data-aos-delay="200">Contact us today for a free consultation and detailed quote for your chosen package.</p>
+        <a href="contact.html" class="cta-btn" data-aos="fade-up" data-aos-delay="400">Get Free Quote</a>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>SRI GURU CONSTRUCTIONS</h3>
+              <p>
+                Bellary, Karnataka, India<br><br>
+                <strong>Phone:</strong> +91 7795 444 954<br>
+                <strong>Email:</strong> sriguruconsultancy05@gmail.com<br>
+              </p>
+              <div class="social-links d-flex mt-3">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End footer info column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="interior.html">Interior Design</a></li>
+              <li><a href="exterior.html">Exterior Design</a></li>
+              <li><a href="residential.html">Residential</a></li>
+              <li><a href="commercial.html">Commercial</a></li>
+              <li><a href="renovation.html">Renovation</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-4 col-md-6">
+            <h4>Quick Contact</h4>
+            <p>Ready to start your construction project? Get in touch with us today!</p>
+            <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          </div><!-- End footer info column-->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>SRI GURU CONSTRUCTIONS</span></strong>. All Rights Reserved
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Package Selection Script -->
+  <script>
+    function selectPackage(packageName, price) {
+      // Store selected package info
+      const packageInfo = {
+        name: packageName,
+        price: price,
+        timestamp: new Date().toISOString()
+      };
+      
+      localStorage.setItem('selectedPackage', JSON.stringify(packageInfo));
+      
+      // Show selection confirmation
+      alert(`You have selected ${packageName} at ₹${price}/sq ft. Redirecting to contact page for quote...`);
+      
+      // Redirect to contact page with package info
+      window.location.href = `contact.html?package=${encodeURIComponent(packageName)}&price=${price}`;
+    }
+    
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+    
+    // Mobile Navigation
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileNavShow = document.querySelector('.mobile-nav-show');
+      const mobileNavHide = document.querySelector('.mobile-nav-hide');
+      const navbar = document.querySelector('.navbar');
+      
+      if (mobileNavShow && mobileNavHide && navbar) {
+        mobileNavShow.addEventListener('click', function() {
+          navbar.classList.add('navbar-mobile');
+          mobileNavShow.classList.add('d-none');
+          mobileNavHide.classList.remove('d-none');
+        });
+        
+        mobileNavHide.addEventListener('click', function() {
+          navbar.classList.remove('navbar-mobile');
+          mobileNavShow.classList.remove('d-none');
+          mobileNavHide.classList.add('d-none');
+        });
+      }
+      
+      // Header scroll effect (same as index page)
+      const header = document.getElementById('header');
+      
+      // Add an event listener to the window's scroll event
+      window.addEventListener('scroll', () => {
+        // Check if the window has scrolled down
+        if (window.scrollY > 100) {
+          // Add the 'scrolled' class to the header
+          header.classList.add('scrolled');
+        } else {
+          // Remove the 'scrolled' class from the header
+          header.classList.remove('scrolled');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

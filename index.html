@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>SRI GURU CONSTRUCTIONS</title>
+  <title>SRI GURU CONSTRUCTION & INTERIORS</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -33,15 +33,256 @@
 
   <!-- Enhanced Index Page Styles -->
   <style>
-    /* Premium Hero Section */
+    /* Enhanced Animations */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+      40% { transform: translateY(-10px) translateX(-50%); }
+      60% { transform: translateY(-5px) translateX(-50%); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+      50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.1); }
+    }
+
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 53, 0.3); }
+      50% { box-shadow: 0 0 30px rgba(255, 107, 53, 0.6), 0 0 40px rgba(247, 147, 30, 0.4); }
+    }
+
+    /* Stylish Hero Stats */
+    .hero-stats-modern {
+      position: relative;
+      padding: 20px;
+    }
+
+    .circular-stat {
+      transition: transform 0.3s ease;
+    }
+
+    .circular-stat:hover {
+      transform: scale(1.1);
+    }
+
+    .floating-badge {
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .floating-badge::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .floating-badge:hover::before {
+      left: 100%;
+    }
+
+    .floating-badge:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 35px rgba(255, 107, 53, 0.5) !important;
+    }
+
+    /* Header Z-Index Fix - Must be first */
+    .header {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      z-index: 9999 !important;
+      overflow: visible !important;
+    }
+    
+    /* Ensure header container allows dropdown overflow */
+    .header .container-fluid,
+    .header .container-xl {
+      overflow: visible !important;
+      position: static !important;
+    }
+    
+    /* Navbar overflow fix - Desktop only */
+    @media (min-width: 1280px) {
+      .navbar {
+        overflow: visible !important;
+        position: static !important;
+      }
+    }
+    
+    /* Enhanced Hero Section - Services Theme */
     #hero {
       position: relative;
-      background: linear-gradient(135deg, rgba(255, 107, 53, 0.9) 0%, rgba(247, 147, 30, 0.8) 100%);
-      min-height: 100vh;
+      background: linear-gradient(135deg, rgba(26, 37, 47, 0.9), rgba(255, 107, 53, 0.8));
+      min-height: 80vh;
       display: flex;
       align-items: center;
       overflow: hidden;
+      z-index: 1;
     }
+
+    /* Hero Badges Hover Effects */
+    .hero-badge:hover {
+      background: rgba(255, 255, 255, 0.25) !important;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 107, 53, 0.2);
+    }
+
+    /* Button Hover Effects */
+    .btn-get-started:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(255, 107, 53, 0.6) !important;
+    }
+
+    .btn-outline-light:hover {
+      background: white !important;
+      color: #ff6b35 !important;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Stats Animation */
+    .hero-stats-modern:hover {
+      transform: translateY(-5px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .hero-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Mobile Responsive Enhancements */
+    @media (max-width: 768px) {
+      #hero {
+        min-height: 70vh;
+        padding: 100px 0 60px;
+      }
+      
+      #hero h1 {
+        font-size: 2.8rem !important;
+      }
+      
+      #hero .subtitle {
+        font-size: 1.2rem !important;
+      }
+      
+      .hero-badges {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+      }
+      
+      .hero-actions {
+        flex-direction: column !important;
+        gap: 15px !important;
+        width: 100%;
+      }
+      
+      .hero-actions a {
+        margin-right: 0 !important;
+        text-align: center;
+        width: 100%;
+      }
+      
+      .hero-stats-modern {
+        margin-top: 40px;
+        padding: 20px !important;
+      }
+      
+      .circular-stat {
+        width: 100px !important;
+        height: 100px !important;
+        margin: 15px 10px !important;
+      }
+      
+      .circular-stat svg {
+        width: 100px !important;
+        height: 100px !important;
+      }
+      
+      .circular-stat h3 {
+        font-size: 1.5rem !important;
+      }
+      
+      .floating-badge {
+        display: block !important;
+        margin: 10px auto !important;
+        max-width: 200px;
+      }
+      
+      .hero-decoration {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #hero {
+        min-height: 65vh;
+        padding: 80px 0 50px;
+      }
+      
+      #hero h1 {
+        font-size: 2.2rem !important;
+      }
+      
+      #hero .subtitle {
+        font-size: 1.1rem !important;
+      }
+      
+      .circular-stat {
+        width: 90px !important;
+        height: 90px !important;
+        margin: 10px 5px !important;
+      }
+      
+      .circular-stat svg {
+        width: 90px !important;
+        height: 90px !important;
+      }
+      
+      .circular-stat h3 {
+        font-size: 1.3rem !important;
+      }
+      
+      .circular-stat p {
+        font-size: 0.7rem !important;
+      }
+      
+      .floating-badge {
+        padding: 10px 16px !important;
+        font-size: 0.9rem !important;
+      }
+      
+      .service-badge {
+        font-size: 0.9rem !important;
+        padding: 8px 20px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #hero {
+        min-height: 55vh;
+        padding: 80px 0 45px;
+      }
+    }
+    
     
     #hero::before {
       content: '';
@@ -54,9 +295,51 @@
       animation: float 20s ease-in-out infinite;
     }
     
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(180deg); }
+    /* Modern Floating Animation */
+    @keyframes floatUp {
+      0%, 100% { 
+        transform: translateY(0px) scale(1);
+        opacity: 0.8;
+      }
+      50% { 
+        transform: translateY(-10px) scale(1.02);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes gentleGlow {
+      0%, 100% { 
+        filter: drop-shadow(0 0 15px rgba(255,255,255,0.2));
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+      50% { 
+        filter: drop-shadow(0 0 25px rgba(255,255,255,0.4));
+        text-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+      }
+    }
+    
+    .hero-content {
+      animation: floatUp 6s ease-in-out infinite;
+    }
+    
+    .hero-content h1 {
+      animation: gentleGlow 4s ease-in-out infinite;
+    }
+    
+    .hero-badge {
+      animation: floatUp 8s ease-in-out infinite;
+    }
+    
+    .hero-badge:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+    
+    .hero-badge:nth-child(2) {
+      animation-delay: 1s;
+    }
+    
+    .hero-badge:nth-child(3) {
+      animation-delay: 1.5s;
     }
     
     .hero-content {
@@ -66,21 +349,34 @@
       color: white;
       max-width: 900px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 25px;
     }
     
     .hero-content h1 {
-      font-size: 4rem;
+      font-size: 3.8rem;
       font-weight: 900;
-      margin-bottom: 20px;
-      text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
-      letter-spacing: -1px;
+      margin-bottom: 25px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      letter-spacing: -1.5px;
       line-height: 1.1;
-      background: linear-gradient(45deg, #fff, #f0f8ff);
+      background: linear-gradient(135deg, #fff 0%, #ecf0f1 50%, #fff 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      animation: titleGlow 3s ease-in-out infinite alternate;
+      position: relative;
+    }
+    
+    .hero-content h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #e74c3c, #f39c12);
+      border-radius: 2px;
+      box-shadow: 0 2px 10px rgba(231, 76, 60, 0.4);
     }
     
     @keyframes titleGlow {
@@ -89,69 +385,101 @@
     }
     
     .hero-content .subtitle {
-      font-size: 1.5rem;
-      font-weight: 300;
-      margin-bottom: 30px;
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 35px;
       opacity: 0.95;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      color: #ecf0f1;
+      line-height: 1.6;
     }
     
     .hero-badges {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 15px;
-      margin: 30px 0;
+      gap: 20px;
+      margin: 35px 0;
     }
     
     .hero-badge {
-      padding: 12px 24px;
-      border-radius: 25px;
-      font-weight: 600;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 30px;
       font-size: 0.9rem;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
-      border: 2px solid rgba(255,255,255,0.3);
-    }
-    
-    .hero-badge:nth-child(1) {
-      background: rgba(255, 204, 0, 0.9);
-      color: #333;
-    }
-    
-    .hero-badge:nth-child(2) {
-      background: rgba(230, 57, 70, 0.9);
-      color: white;
-    }
-    
-    .hero-badge:nth-child(3) {
-      background: rgba(69, 123, 157, 0.9);
-      color: white;
-    }
-    
-    .hero-badge:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    }
-    
-    .btn-get-started {
-      display: inline-block;
-      padding: 18px 40px;
-      margin-top: 30px;
-      background: rgba(255,255,255,0.2);
-      color: white;
-      border: 3px solid white;
-      border-radius: 50px;
-      font-size: 1.2rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 0.8px;
       transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       position: relative;
       overflow: hidden;
-      backdrop-filter: blur(10px);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    
+    .hero-badge::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.6s ease;
+    }
+    
+    .hero-badge:hover::before {
+      left: 100%;
+    }
+    
+    .hero-badge:nth-child(1) {
+      border-color: rgba(241, 196, 15, 0.4);
+      box-shadow: 0 0 20px rgba(241, 196, 15, 0.3);
+    }
+    
+    .hero-badge:nth-child(2) {
+      border-color: rgba(231, 76, 60, 0.4);
+      box-shadow: 0 0 20px rgba(231, 76, 60, 0.3);
+    }
+    
+    .hero-badge:nth-child(3) {
+      border-color: rgba(52, 152, 219, 0.4);
+      box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
+    }
+    
+    .hero-badge:hover {
+      transform: translateY(-5px) scale(1.05);
+      background: rgba(255, 255, 255, 0.25);
+      border-color: rgba(255, 255, 255, 0.4);
+      box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.3),
+        0 0 25px rgba(255, 255, 255, 0.2);
+    }
+    
+    .btn-get-started {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 40px;
+      margin-top: 30px;
+      background: linear-gradient(135deg, rgba(231, 76, 60, 0.9) 0%, rgba(192, 57, 43, 0.9) 100%);
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(15px);
+      box-shadow: 
+        0 10px 30px rgba(231, 76, 60, 0.4),
+        0 1px 0 rgba(255, 255, 255, 0.3) inset;
+      text-decoration: none;
     }
     
     .btn-get-started::before {
@@ -161,19 +489,22 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: white;
-      transition: left 0.4s ease;
-      z-index: -1;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.6s ease;
     }
     
     .btn-get-started:hover::before {
-      left: 0;
+      left: 100%;
     }
     
     .btn-get-started:hover {
-      color: #FF6B35;
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      color: white;
+      transform: translateY(-5px) scale(1.05);
+      background: linear-gradient(135deg, rgba(192, 57, 43, 0.95) 0%, rgba(169, 50, 38, 0.95) 100%);
+      box-shadow: 
+        0 15px 40px rgba(231, 76, 60, 0.5),
+        0 1px 0 rgba(255, 255, 255, 0.4) inset;
+      border-color: rgba(255, 255, 255, 0.4);
     }
     
     /* Enhanced Carousel */
@@ -224,60 +555,411 @@
       transform: translateY(-50%) scale(1.1);
     }
     
-    /* Enhanced Who We Are Section */
+    /* Enhanced Modern Who We Are Section */
     .who-we-are {
-      padding: 120px 0;
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 100px 0;
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f3f4 100%);
       position: relative;
+      overflow: hidden;
     }
     
     .who-we-are::before {
       content: '';
       position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(247, 147, 30, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(52, 152, 219, 0.05) 0%, transparent 50%);
+      animation: float 20s ease-in-out infinite;
+      pointer-events: none;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      33% { transform: translate(30px, -30px) rotate(120deg); }
+      66% { transform: translate(-20px, 20px) rotate(240deg); }
+    }
+
+    /* Section Header */
+    .who-we-are .section-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff6b35, #f7931e);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    }
+    
+    .who-we-are .section-title h2 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: #2c3e50;
+      margin-bottom: 25px;
+      line-height: 1.2;
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .who-we-are .section-subtitle {
+      font-size: 1.2rem;
+      color: #6c757d;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Image Wrapper */
+    .about-image-wrapper {
+      position: relative;
+    }
+    
+    .about-image-main {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .about-image-main:hover {
+      transform: translateY(-10px);
+    }
+    
+    .about-image-main img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    
+    .about-image-main:hover img {
+      transform: scale(1.05);
+    }
+    
+    .image-overlay {
+      position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background-image: 
-        radial-gradient(circle at 25% 25%, rgba(255, 107, 53, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 75% 75%, rgba(247, 147, 30, 0.05) 0%, transparent 50%);
-      pointer-events: none;
+      background: rgba(255, 107, 53, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
     
-    .who-we-are .section-title h2 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      color: #2C3E50;
-      margin-bottom: 20px;
-      position: relative;
-      display: inline-block;
+    .about-image-main:hover .image-overlay {
+      opacity: 1;
     }
     
-    .who-we-are .section-title h2::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 100px;
-      height: 4px;
-      background: linear-gradient(90deg, #FF6B35, #F7931E);
-      border-radius: 2px;
+    .overlay-content {
+      text-align: center;
+      color: white;
     }
     
-    .who-we-are .lead {
-      font-size: 1.4rem;
-      color: #FF6B35;
+    .overlay-content i {
+      font-size: 4rem;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .overlay-content i:hover {
+      transform: scale(1.1);
+    }
+    
+    .overlay-content span {
+      display: block;
+      font-size: 1.2rem;
       font-weight: 600;
-      font-style: italic;
-      margin-bottom: 25px;
+    }
+
+    /* Floating Stats */
+    .floating-stats {
+      position: absolute;
+      bottom: -30px;
+      right: 20px;
+      display: flex;
+      gap: 20px;
     }
     
-    .who-we-are .quote {
+    .stat-item {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      min-width: 120px;
+      transition: transform 0.3s ease;
+    }
+    
+    .stat-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .stat-item h3 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #ff6b35;
+      margin-bottom: 5px;
+    }
+    
+    .stat-item p {
+      font-size: 0.9rem;
+      color: #6c757d;
+      margin: 0;
+    }
+
+    /* About Content */
+    .about-content {
+      padding-left: 30px;
+    }
+    
+    .highlight-text {
+      background: linear-gradient(135deg, #fff5f0, #ffe8d9);
+      padding: 30px;
+      border-radius: 15px;
+      border-left: 4px solid #ff6b35;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    
+    .highlight-text i {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      color: #ff6b35;
+      font-size: 1.5rem;
+    }
+    
+    .highlight-text p {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #2c3e50;
+      margin: 0;
+      padding-left: 40px;
+      line-height: 1.6;
+    }
+    
+    .description {
       font-size: 1.1rem;
       line-height: 1.8;
       color: #6c757d;
+      margin-bottom: 40px;
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin-bottom: 40px;
     }
     
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .feature-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #ff6b35, #f7931e);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .feature-icon i {
+      color: white;
+      font-size: 1.2rem;
+    }
+    
+    .feature-content h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+    
+    .feature-content p {
+      font-size: 0.95rem;
+      color: #6c757d;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* CTA Buttons */
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .cta-buttons .btn {
+      padding: 15px 30px;
+      font-weight: 600;
+      border-radius: 12px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+    
+    .cta-buttons .btn-primary {
+      background: linear-gradient(135deg, #ff6b35, #f7931e);
+      border: none;
+      color: white;
+      box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+    }
+    
+    .cta-buttons .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
+    }
+    
+    .cta-buttons .btn-outline-primary {
+      border: 2px solid #ff6b35;
+      color: #ff6b35;
+      background: transparent;
+    }
+    
+    .cta-buttons .btn-outline-primary:hover {
+      background: #ff6b35;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+    }
+
+    /* ======= Packages Section Styling ======= */
+    .packages-section {
+      padding: 80px 0;
+      background: #ffffff;
+      position: relative;
+    }
+
+    /* Section Header */
+    .packages-section .section-header h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #2c3e50;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    .packages-section .section-header h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #ff6b35;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Packages List */
+    .packages-list {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border: 2px solid #f8f9fa;
+    }
+    
+    .package-item {
+      border-bottom: 1px solid #e9ecef;
+      transition: all 0.3s ease;
+    }
+    
+    .package-item:last-child {
+      border-bottom: none;
+    }
+    
+    .package-item:hover {
+      background: #f8f9fa;
+      transform: translateX(10px);
+    }
+    
+    .package-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 30px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+    
+    .package-link:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    .package-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #2c3e50;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .package-price {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #ff6b35;
+      background: linear-gradient(135deg, #ff6b35, #f7931e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* View All Button */
+    .packages-section .btn-primary {
+      background: linear-gradient(135deg, #ff6b35, #f7931e);
+      border: none;
+      color: white;
+      padding: 15px 40px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .packages-section .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
+    }
+
     /* Projects Section Enhancement */
     #projects {
       padding: 120px 0;
@@ -336,30 +1018,215 @@
       box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
     }
     
-    /* Mobile Responsiveness */
+    /* Mobile Responsiveness - Enhanced Visibility */
     @media (max-width: 768px) {
+      .hero-content {
+        padding: 0 25px;
+        text-align: center;
+      }
+      
       .hero-content h1 {
         font-size: 2.5rem;
+        margin-bottom: 25px;
+        letter-spacing: -0.5px;
+        text-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+        color: white !important;
+        background: none !important;
+        -webkit-text-fill-color: white !important;
+      }
+      
+      .hero-content h1::after {
+        width: 50px;
+        height: 3px;
+        bottom: -12px;
+        background: linear-gradient(90deg, #e74c3c, #f39c12);
+        box-shadow: 0 2px 15px rgba(231, 76, 60, 0.6);
+      }
+      
+      .hero-content .subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.95) !important;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
       }
       
       .hero-badges {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
+        margin: 30px 0 35px;
+      }
+      
+      .hero-badge {
+        width: auto;
+        min-width: 240px;
+        font-size: 0.9rem;
+        padding: 14px 30px;
+        letter-spacing: 0.5px;
+        background: rgba(255, 255, 255, 0.2) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        color: white !important;
+        text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
       }
       
       .who-we-are .section-title h2,
       #projects .section-header h2 {
         font-size: 2.5rem;
       }
+      
+      /* Who We Are Mobile Responsiveness */
+      .who-we-are {
+        padding: 60px 0;
+      }
+      
+      .who-we-are .section-title h2 {
+        font-size: 2.2rem;
+      }
+      
+      .about-content {
+        padding-left: 0;
+        margin-top: 40px;
+      }
+      
+      .floating-stats {
+        position: static;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .cta-buttons {
+        justify-content: center;
+      }
+      
+      .cta-buttons .btn {
+        padding: 12px 25px;
+        font-size: 0.95rem;
+      }
+      
+      /* Packages Section Mobile */
+      .packages-section {
+        padding: 60px 0;
+      }
+      
+      .packages-section .section-header h2 {
+        font-size: 2.2rem;
+      }
+      
+      .packages-section .section-header h3 {
+        font-size: 1.4rem;
+      }
+      
+      .package-link {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+      
+      .package-name {
+        font-size: 1.2rem;
+      }
+      
+      .package-price {
+        font-size: 1.1rem;
+      }
     }
     
     @media (max-width: 480px) {
+      .hero-content {
+        padding: 0 20px;
+      }
+      
       .hero-content h1 {
         font-size: 2rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+      
+      .hero-content h1::after {
+        width: 40px;
+        height: 2px;
+        bottom: -10px;
+      }
+      
+      .hero-content .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+        line-height: 1.5;
+      }
+      
+      .hero-badge {
+        min-width: 200px;
+        font-size: 0.85rem;
+        padding: 12px 25px;
       }
       
       .btn-get-started {
         padding: 15px 30px;
+        font-size: 1rem;
+      }
+      
+      /* Who We Are Small Mobile */
+      .who-we-are .section-title h2 {
+        font-size: 1.9rem;
+      }
+      
+      .who-we-are .section-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .highlight-text p {
+        font-size: 1.1rem;
+      }
+      
+      .stat-item {
+        min-width: 100px;
+        padding: 15px;
+      }
+      
+      .stat-item h3 {
+        font-size: 1.5rem;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .cta-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+      }
+      
+      /* Packages Section Small Mobile */
+      .packages-section .section-header h2 {
+        font-size: 1.8rem;
+      }
+      
+      .packages-section .section-header h3 {
+        font-size: 1.2rem;
+      }
+      
+      .package-link {
+        padding: 20px 15px;
+      }
+      
+      .package-name {
+        font-size: 1.1rem;
+      }
+      
+      .package-price {
+        font-size: 1rem;
+      }
+      
+      .packages-section .btn-primary {
+        padding: 12px 25px;
         font-size: 1rem;
       }
     }
@@ -519,6 +1386,361 @@
         font-size: 1.5rem;
       }
     }
+    
+    /* Mobile navigation color and backdrop */
+    @media (max-width: 1279px) {
+      .header.scrolled .navbar a,
+      .header.scrolled .navbar a:focus,
+      .header.scrolled .navbar .dropdown ul li a,
+      .header.scrolled .navbar .dropdown ul li a:focus {
+        color: #2c3e50 !important;
+      }
+      
+      .header.scrolled .navbar a:hover,
+      .header.scrolled .navbar .active,
+      .header.scrolled .navbar .active:focus,
+      .header.scrolled .navbar li:hover > a,
+      .header.scrolled .navbar .dropdown ul li a:hover {
+        color: #ff6b35 !important;
+      }
+      
+      .header.scrolled .navbar ul,
+      .navbar ul {
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        border-left: 1px solid rgba(0, 0, 0, 0.05) !important;
+      }
+      
+      .header.scrolled .navbar .dropdown ul,
+      .navbar .dropdown ul {
+        background: rgba(255, 255, 255, 0.98) !important;
+        border: 1px solid rgba(44, 62, 80, 0.1) !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+      }
+    }
+    
+    /* Logo positioning and sizing */
+    .logo {
+      margin-right: auto !important;
+    }
+    
+    .logo img {
+      width: 70px !important;
+      height: 70px !important;
+      margin-right: 20px !important;
+      margin-left: -10px !important;
+    }
+    
+    .header.scrolled .logo img {
+      width: 60px !important;
+      height: 60px !important;
+    }
+    
+    /* Mobile responsive logo sizing */
+    @media (max-width: 768px) {
+      .logo img {
+        width: 55px !important;
+        height: 55px !important;
+        margin-right: 15px !important;
+        margin-left: -5px !important;
+      }
+      
+      .header.scrolled .logo img {
+        width: 50px !important;
+        height: 50px !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .logo img {
+        width: 50px !important;
+        height: 50px !important;
+        margin-right: 12px !important;
+        margin-left: 0px !important;
+      }
+      
+      .header.scrolled .logo img {
+        width: 45px !important;
+        height: 45px !important;
+      }
+    }
+  </style>
+
+  <!-- Fix Dropdown Issues -->
+  <style>
+    /* ========================================
+       DROPDOWN FIX STYLES
+    ======================================== */
+    
+    /* Ensure dropdown works on desktop */
+    .navbar .dropdown {
+      position: relative;
+    }
+    
+    .navbar .dropdown > ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      padding: 10px 0;
+      min-width: 220px;
+      z-index: 10000 !important;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      list-style: none;
+      margin: 0;
+      overflow: visible !important;
+      clip: unset !important;
+      white-space: nowrap;
+    }
+    
+    .navbar .dropdown:hover > ul,
+    .navbar .dropdown.active > ul {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .navbar .dropdown ul li {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navbar .dropdown ul li a {
+      display: flex;
+      align-items: center;
+      padding: 8px 20px;
+      color: #2c3e50;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-size: 0.9rem;
+    }
+    
+    .navbar .dropdown ul li a:hover {
+      background: rgba(255, 107, 53, 0.1);
+      color: #ff6b35;
+    }
+    
+    .navbar .dropdown ul li a i {
+      margin-right: 8px;
+      color: #ff6b35;
+      font-size: 1rem;
+    }
+    
+    /* Mobile dropdown styles - Enhanced Visibility */
+    @media (max-width: 1279px) {
+      .navbar .dropdown > ul {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+        border: 2px solid #ff6b35 !important;
+        background: rgba(44, 62, 80, 0.95) !important;
+        backdrop-filter: blur(15px) !important;
+        margin: 10px 15px !important;
+        border-radius: 12px !important;
+        display: none !important;
+        padding: 8px 0 !important;
+        width: calc(100% - 30px) !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+      }
+      
+      .navbar .dropdown.dropdown-active > ul {
+        display: block !important;
+        animation: slideDown 0.3s ease-out !important;
+      }
+      
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .navbar .dropdown ul li a {
+        color: #ffffff !important;
+        padding: 14px 20px !important;
+        font-weight: 600 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+        transition: all 0.3s ease !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+      
+      .navbar .dropdown ul li:last-child a {
+        border-bottom: none !important;
+      }
+      
+      .navbar .dropdown ul li a:hover {
+        background: rgba(255, 107, 53, 0.2) !important;
+        color: #ff6b35 !important;
+        padding-left: 25px !important;
+        border-radius: 8px !important;
+        margin: 0 8px !important;
+      }
+      
+      .navbar .dropdown ul li a i {
+        color: #ff6b35 !important;
+        font-size: 1.1rem !important;
+        margin-right: 12px !important;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+      }
+      
+      .navbar .dropdown ul li a:hover i {
+        color: #ffffff !important;
+        transform: scale(1.1) !important;
+      }
+      
+      /* Ensure dropdown indicator works properly */
+      .navbar .dropdown > a .dropdown-indicator {
+        transition: transform 0.3s ease !important;
+      }
+      
+      .navbar .dropdown.dropdown-active > a .dropdown-indicator {
+        transform: rotate(180deg) !important;
+      }
+    }
+    
+    /* Enhanced mobile navigation background */
+    @media (max-width: 1279px) {
+      .navbar ul {
+        background: rgba(44, 62, 80, 0.98) !important;
+        backdrop-filter: blur(25px) !important;
+        border-left: 3px solid #ff6b35 !important;
+      }
+      
+      .navbar a,
+      .navbar a:focus {
+        color: #ffffff !important;
+        font-weight: 600 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+      }
+      
+      .navbar a:hover,
+      .navbar .active,
+      .navbar li:hover > a {
+        color: #ff6b35 !important;
+        background: rgba(255, 107, 53, 0.1) !important;
+      }
+    }
+    
+    /* Ensure proper z-index for dropdown */
+    .header {
+      z-index: 9999 !important;
+      position: relative;
+      overflow: visible !important;
+    }
+    
+    .navbar {
+      z-index: 9998 !important;
+      position: relative;
+      overflow: visible !important;
+    }
+    
+    .navbar .dropdown {
+      position: relative;
+      z-index: 9997 !important;
+      overflow: visible !important;
+    }
+    
+    .navbar .dropdown > ul {
+      z-index: 10000 !important;
+      position: absolute !important;
+      overflow: visible !important;
+      clip: unset !important;
+      -webkit-clip-path: none !important;
+      clip-path: none !important;
+    }
+    
+    /* Ensure hero section doesn't overlap dropdown */
+    #hero {
+      z-index: 1 !important;
+      position: relative;
+    }
+    
+    /* Fix any other sections that might interfere */
+    section {
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Ensure dropdown is always on top and not cropped - Desktop only */
+    @media (min-width: 1280px) {
+      .navbar .dropdown:hover > ul,
+      .navbar .dropdown.active > ul,
+      .navbar .dropdown.dropdown-active > ul {
+        z-index: 10001 !important;
+        position: absolute !important;
+        overflow: visible !important;
+        clip: unset !important;
+        max-height: none !important;
+        height: auto !important;
+      }
+    }
+    
+    /* Prevent any parent containers from clipping */
+    .header *,
+    .navbar *,
+    .container-fluid,
+    .container-xl {
+      overflow: visible !important;
+    }
+    
+    /* Mobile navigation fixes */
+    @media (max-width: 1279px) {
+      /* Ensure mobile navbar is hidden by default */
+      .navbar {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
+        width: 100% !important;
+        max-width: 350px !important;
+        bottom: 0 !important;
+        transition: 0.3s !important;
+        z-index: 9997 !important;
+        overflow: visible !important;
+      }
+      
+      /* Show mobile navbar when active */
+      .mobile-nav-active .navbar {
+        right: 0 !important;
+      }
+      
+      .mobile-nav-toggle {
+        font-size: 28px;
+        cursor: pointer;
+        color: #2c3e50;
+        transition: all 0.3s ease;
+      }
+      
+      .header.scrolled .mobile-nav-toggle {
+        color: #2c3e50;
+      }
+      
+      .mobile-nav-hide {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+        color: #2c3e50;
+        font-size: 32px;
+        cursor: pointer;
+      }
+    }
   </style>
 
   <!-- =======================================================
@@ -536,43 +1758,35 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="images/logo.jpg" alt="">
-        <h1>SRI GURU CONSTRUCTIONS<span>.</span></h1>
+        <img src="images/new_logo.jpg" alt="Sri Guru Construction Logo">
+        <h1>SRI GURU CONSTRUCTION<br>& INTERIORS<span>.</span></h1>
       </a>
 
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li class="dropdown"><a href="#"><span>Services</span> <i
+          <li class="dropdown"><a href="services.html"><span>Services</span> <i
                 class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a class="dropdown-item" href="interior.html"><i class="bi bi-house-door"></i>Interior Design</a></li>
-              <li><a class="dropdown-item" href="exterior.html"><i class="bi bi-building"></i>Exterior Design</a></li>
-              <li><a class="dropdown-item" href="pre-design.html"><i class="bi bi-pencil-square"></i>Pre Design</a></li>
-              <li><a class="dropdown-item" href="residential.html"><i class="bi bi-house-heart"></i>Residential</a></li>
-              <li><a class="dropdown-item" href="commercial.html"><i class="bi bi-buildings"></i>Commercial</a></li>
-              <li><a class="dropdown-item" href="renovation.html"><i class="bi bi-tools"></i>Renovation</a></li>
-              <li><a class="dropdown-item" href="consultation.html"><i class="bi bi-chat-dots"></i>Consultation</a></li>
+              <li><a class="dropdown-item" href="interior.html"><i class="bi bi-house-door"></i> Interior Design</a></li>
+              <li><a class="dropdown-item" href="exterior.html"><i class="bi bi-building"></i> Exterior Design</a></li>
+              <li><a class="dropdown-item" href="pre-design.html"><i class="bi bi-pencil-square"></i> Pre Design</a></li>
+              <li><a class="dropdown-item" href="residential.html"><i class="bi bi-house-heart"></i> Residential</a></li>
+              <li><a class="dropdown-item" href="commercial.html"><i class="bi bi-buildings"></i> Commercial</a></li>
+              <li><a class="dropdown-item" href="renovation.html"><i class="bi bi-tools"></i> Renovation</a></li>
+              <li><a class="dropdown-item" href="consultation.html"><i class="bi bi-chat-dots"></i> Consultation</a></li>
             </ul>
           </li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="packages.html">Packages</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="blog.html">FAQ's</a></li>
+          <li><a href="materials.html">Materials</a></li>
+          <li><a href="contact_us.html">Contact Us</a></li>
         </ul>
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-              <a class="nav-link btn btn-primary text-white" href="#">Let's Start</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="tel:+91 7795 444 954" style="color: white; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);"><i class="fas fa-phone-alt"></i> +91 7795 444 954</a>
-          </li>
-      </ul>
       </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
     </div>
   </header><!-- End Header -->
@@ -626,66 +1840,217 @@
     </div>
   </div>
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="hero-content" data-aos="fade-up">
-      <h1>SRI GURU CONSTRUCTIONS</h1>
-      <p class="subtitle">Building Dreams Into Reality</p>
-      <div class="hero-badges">
-        <div class="hero-badge">Innovative Designs</div>
-        <div class="hero-badge">Quality Assured</div>
-        <div class="hero-badge">Expert Craftsmanship</div>
-      </div>
-      <a href="#get-started" class="btn-get-started">Start Your Project</a>
-    </div>
+  <!-- ======= Enhanced Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center" style="background: linear-gradient(135deg, rgba(26, 37, 47, 0.9), rgba(255, 107, 53, 0.8)), url('assets/img/hero-carousel/hero-carousel-1.jpg'); background-size: cover; background-position: center; min-height: 80vh; position: relative; overflow: hidden;">
+    
+    <!-- Static Background Elements -->
+    <div class="hero-decoration" style="position: absolute; top: 15%; right: 8%; width: 120px; height: 120px; background: rgba(255, 107, 53, 0.1); border-radius: 50%;"></div>
+    <div class="hero-decoration" style="position: absolute; bottom: 25%; left: 10%; width: 80px; height: 80px; background: rgba(247, 147, 30, 0.1); border-radius: 50%;"></div>
+    <div class="hero-decoration" style="position: absolute; top: 40%; right: 25%; width: 50px; height: 50px; background: rgba(255, 107, 53, 0.15); border-radius: 50%;"></div>
 
-    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-      <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/hero-carousel-1.jpg)"></div>
-      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-2.jpg)"></div>
-      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-3.jpg)"></div>
-      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-4.jpg)"></div>
-      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-5.jpg)"></div>
-
-      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-      </a>
-
-      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-      </a>
-    </div>
-  </section><!-- End Hero Section -->
-
-  <!-- ======= Who We Are Section ======= -->
-  <!-- ======= Who We Are Section ======= -->
-  <section class="who-we-are">
-    <div class="container">
+    <div class="container position-relative">
       <div class="row align-items-center">
-        <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.5s">
-          <img src="images/who_are_we.png" alt="About Us" class="img-fluid rounded">
+        <div class="col-lg-8">
+          <div class="hero-content" data-aos="fade-up">
+            <span class="service-badge" style="display: inline-block; background: linear-gradient(45deg, #ff6b35, #f7931e); color: white; padding: 10px 25px; border-radius: 25px; font-size: 1rem; font-weight: 600; margin-bottom: 25px; letter-spacing: 0.5px; box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);">Premium Construction & Interiors</span>
+            
+            <h1 style="font-size: 4rem; font-weight: 900; color: white; line-height: 1.2; margin-bottom: 30px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+              Building Dreams Into <span style="background: linear-gradient(45deg, #ff6b35, #f7931e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Reality</span>
+            </h1>
+            
+            <p class="subtitle" style="font-size: 1.4rem; color: rgba(255,255,255,0.9); line-height: 1.6; margin-bottom: 30px; max-width: 650px;">
+              Transform your vision into magnificent structures with our expert construction and interior design services. Quality, innovation, and craftsmanship in every project.
+            </p>
+            
+            <div class="hero-badges" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 40px;">
+              <div class="hero-badge" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); color: white; padding: 12px 20px; border-radius: 25px; font-size: 0.95rem; font-weight: 500; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;">
+                <i class="fas fa-lightbulb" style="margin-right: 8px; color: #f7931e;"></i>Innovative Designs
+              </div>
+              <div class="hero-badge" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); color: white; padding: 12px 20px; border-radius: 25px; font-size: 0.95rem; font-weight: 500; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;">
+                <i class="fas fa-shield-alt" style="margin-right: 8px; color: #ff6b35;"></i>Quality Assured
+              </div>
+              <div class="hero-badge" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); color: white; padding: 12px 20px; border-radius: 25px; font-size: 0.95rem; font-weight: 500; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;">
+                <i class="fas fa-tools" style="margin-right: 8px; color: #f7931e;"></i>Expert Craftsmanship
+              </div>
+            </div>
+            
+            <div class="hero-actions">
+              <a href="#get-started" class="btn-get-started" style="background: linear-gradient(45deg, #ff6b35, #f7931e); border: none; padding: 18px 40px; border-radius: 50px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-right: 20px; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
+                <i class="fas fa-rocket"></i>
+                Start Your Project
+              </a>
+              <a href="#services" class="btn btn-outline-light" style="padding: 18px 35px; border-radius: 50px; font-weight: 600; border: 2px solid white; transition: all 0.3s ease; color: white; text-decoration: none;">
+                <i class="fas fa-eye" style="margin-right: 8px;"></i>View Services
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.5s">
-          <div class="section-title">
-            <h2>Who We Are</h2>
-            <p>Building Dreams, Brick by Brick</p>
-          </div>
-          <p class="lead">"We're not just builders, we're dreamers. We're passionate about creating structures that inspire and uplift."</p>
-          <p class="quote">Our goal is to deliver exceptional projects that exceed our clients' expectations. We're committed to quality, innovation, and customer satisfaction</p>
-          <div class="row">
-            <div class="col-md-6">
-              <ul class="list-unstyled">
-                <li><i class="fas fa-check"></i> Experienced Team</li>
-                <li><i class="fas fa-check"></i> Quality Materials</li>
-              </ul>
+        
+        <div class="col-lg-4 text-center" data-aos="fade-left" data-aos-delay="200">
+          <div class="hero-stats-modern">
+            <!-- Circular Progress Stats -->
+            <div class="circular-stat" style="position: relative; display: inline-block; margin: 20px; width: 120px; height: 120px;">
+              <svg width="120" height="120" style="transform: rotate(-90deg);">
+                <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="6"/>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#ff6b35" stroke-width="6" stroke-dasharray="314" stroke-dashoffset="50" style="transition: stroke-dashoffset 2s ease;">
+                  <animate attributeName="stroke-dashoffset" from="314" to="50" dur="2s" begin="0s"/>
+                </circle>
+              </svg>
+              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                <h3 style="color: #ff6b35; font-size: 1.8rem; font-weight: 800; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">250+</h3>
+                <p style="color: white; font-size: 0.75rem; margin: 0; font-weight: 500; opacity: 0.9;">Happy Families</p>
+              </div>
             </div>
-            <div class="col-md-6">
-              <ul class="list-unstyled">
-                <li><i class="fas fa-check"></i> Client-Focused Approach</li>
-                <li><i class="fas fa-check"></i> Timely Completion</li>
-              </ul>
+
+            <div class="circular-stat" style="position: relative; display: inline-block; margin: 20px; width: 120px; height: 120px;">
+              <svg width="120" height="120" style="transform: rotate(-90deg);">
+                <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="6"/>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#f7931e" stroke-width="6" stroke-dasharray="314" stroke-dashoffset="80" style="transition: stroke-dashoffset 2s ease;">
+                  <animate attributeName="stroke-dashoffset" from="314" to="80" dur="2s" begin="0.5s"/>
+                </circle>
+              </svg>
+              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                <h3 style="color: #f7931e; font-size: 1.8rem; font-weight: 800; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">12+</h3>
+                <p style="color: white; font-size: 0.75rem; margin: 0; font-weight: 500; opacity: 0.9;">Years Excellence</p>
+              </div>
+            </div>
+
+            <!-- Static Achievement Badges -->
+            <div class="achievement-badges" style="margin-top: 30px;">
+              <div class="floating-badge" style="display: inline-flex; align-items: center; background: linear-gradient(135deg, rgba(255, 107, 53, 0.9), rgba(247, 147, 30, 0.9)); color: white; padding: 12px 20px; border-radius: 30px; margin: 8px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);">
+                <i class="fas fa-star" style="margin-right: 8px; color: #fff; font-size: 1.1rem;"></i>
+                <span style="font-weight: 600; font-size: 1rem;">5â˜… Rated</span>
+              </div>
+              
+              <div class="floating-badge" style="display: inline-flex; align-items: center; background: linear-gradient(135deg, rgba(247, 147, 30, 0.9), rgba(255, 107, 53, 0.9)); color: white; padding: 12px 20px; border-radius: 30px; margin: 8px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 8px 25px rgba(247, 147, 30, 0.3);">
+                <i class="fas fa-award" style="margin-right: 8px; color: #fff; font-size: 1.1rem;"></i>
+                <span style="font-weight: 600; font-size: 1rem;">Premium Quality</span>
+              </div>
+            </div>
+
+            <!-- Static Glowing Orb Effect -->
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px; height: 200px; background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%); border-radius: 50%; pointer-events: none; z-index: -1;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Background Carousel (Hidden but functional) -->
+    <div id="hero-carousel" class="carousel slide position-absolute w-100 h-100" data-bs-ride="carousel" data-bs-interval="8000" style="top: 0; left: 0; z-index: -1;">
+      <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/hero-carousel-1.jpg); background-size: cover; background-position: center; height: 100%; filter: brightness(0.3);"></div>
+      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-2.jpg); background-size: cover; background-position: center; height: 100%; filter: brightness(0.3);"></div>
+      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-3.jpg); background-size: cover; background-position: center; height: 100%; filter: brightness(0.3);"></div>
+      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-4.jpg); background-size: cover; background-position: center; height: 100%; filter: brightness(0.3);"></div>
+      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-5.jpg); background-size: cover; background-position: center; height: 100%; filter: brightness(0.3);"></div>
+    </div>
+  </section><!-- End Enhanced Hero Section -->
+
+  <!-- ======= Who We Are Section ======= -->
+  <section class="who-we-are" id="about">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8">
+          <div class="section-title" data-aos="fade-up">
+            <span class="section-badge">About Sri Guru Construction & Interior</span>
+            <h2>Crafting Dreams Into Reality</h2>
+            <p class="section-subtitle">Building excellence through innovation, dedication, and unmatched craftsmanship since our inception.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+          <div class="about-image-wrapper">
+            <div class="about-image-main">
+              <img src="images/who_are_we.png" alt="Sri Guru Construction Team" class="img-fluid">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="fas fa-play-circle"></i>
+                  <span>Watch Our Story</span>
+                </div>
+              </div>
+            </div>
+            <div class="floating-stats">
+              <div class="stat-item">
+                <h3>500+</h3>
+                <p>Projects Completed</p>
+              </div>
+              <div class="stat-item">
+                <h3>15+</h3>
+                <p>Years Experience</p>
+              </div>
             </div>
           </div>
-          <button class="btn btn-primary">Learn More</button>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+          <div class="about-content">
+            <div class="highlight-text">
+              <i class="fas fa-quote-left"></i>
+              <p>We don't just build structures; we create legacies that stand the test of time, embodying dreams and aspirations of our valued clients.</p>
+            </div>
+            
+            <p class="description">
+              At Sri Guru Construction & Interiors, we blend traditional craftsmanship with cutting-edge technology to deliver exceptional results. Our commitment to excellence has made us a trusted name in the construction industry.
+            </p>
+
+            <!-- Features Grid -->
+            <div class="features-grid">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="feature-content">
+                  <h4>Expert Team</h4>
+                  <p>Skilled professionals with decades of combined experience</p>
+                </div>
+              </div>
+              
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-award"></i>
+                </div>
+                <div class="feature-content">
+                  <h4>Premium Quality</h4>
+                  <p>Top-grade materials and uncompromising quality standards</p>
+                </div>
+              </div>
+              
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="feature-content">
+                  <h4>Timely Delivery</h4>
+                  <p>On-schedule completion with meticulous project management</p>
+                </div>
+              </div>
+              
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-handshake"></i>
+                </div>
+                <div class="feature-content">
+                  <h4>Client Satisfaction</h4>
+                  <p>Personalized approach ensuring 100% customer happiness</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="cta-buttons">
+              <a href="#contact" class="btn btn-primary btn-lg">
+                <i class="fas fa-phone"></i>
+                Get Free Quote
+              </a>
+              <a href="#projects" class="btn btn-outline-primary btn-lg">
+                <i class="fas fa-eye"></i>
+                View Projects
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -694,251 +2059,472 @@
   <!-- ======= Services Section ======= -->
   <section id="services" class="services section-bg">
     <div class="container" data-aos="fade-up">
-
       <div class="section-header">
         <h2>Our Services</h2>
         <p>Flawless construction powered by deep expertise.</p>
       </div>
-
-      <div class="row gy-4">
-        <div class="container">
-          <div class="service-grid">
-              <a href="pre-design.html" class="service-item">
-                  <img src="images/pre_design.jpg" alt="Pre-Design">
-                  <h3>Pre-Design</h3>
-              </a>
-              <a href="interior.html" class="service-item">
-                  <img src="images/interior_design.jpg" alt="Interior Design">
-                  <h3>Interior Design</h3>
-              </a>
-              <a href="exterior.html" class="service-item">
-                  <img src="images/exterior_design.jpg" alt="Exterior Design">
-                  <h3>Exterior Design</h3>
-              </a>
-              <a href="furniture.html" class="service-item">
-                  <img src="images/furniture.jpg" alt="Furniture">
-                  <h3>Furniture</h3>
-              </a>
-              <a href="residential.html" class="service-item">
-                  <img src="images/Residential.jpg" alt="Residential">
-                  <h3>Residential</h3>
-              </a>
-              <a href="commercial.html" class="service-item">
-                  <img src="images/commercial.jpg" alt="Commercial">
-                  <h3>Commercial</h3>
-              </a>
-              <a href="renovation.html" class="service-item">
-                  <img src="images/Renovation.jpg" alt="Renovation">
-                  <h3>Renovation</h3>
-              </a>
-              <a href="consultation.html" class="service-item">
-                  <img src="images/consultation.jpg" alt="Consultation">
-                  <h3>Consultation</h3>
-              </a>
-          </div>
+      <div class="services-container">
+        <div class="services-grid-modern">
+          <a href="pre-design.html" class="service-card-modern">
+            <div class="service-image-block">
+              <img src="images/pre_design.jpg" alt="Pre-Design">
+              <div class="service-overlay">
+                <span class="service-text">PRE-DESIGN</span>
+              </div>
+            </div>
+          </a>
+          <a href="interior.html" class="service-card-modern">
+            <div class="service-image-block">
+              <img src="images/interior_design.jpg" alt="Interior Design">
+              <div class="service-overlay">
+                <span class="service-text">INTERIOR DESIGN</span>
+              </div>
+            </div>
+          </a>
+          <a href="exterior.html" class="service-card-modern">
+            <div class="service-image-block">
+              <img src="images/exterior_design.jpg" alt="Exterior Design">
+              <div class="service-overlay">
+                <span class="service-text">EXTERIOR DESIGN</span>
+              </div>
+            </div>
+          </a>
+          <a href="materials.html" class="service-card-modern">
+            <div class="service-image-block">
+              <img src="images/furniture.jpg" alt="Furniture">
+              <div class="service-overlay">
+                <span class="service-text">FURNITURE</span>
+              </div>
+            </div>
+          </a>
+          <a href="residential.html" class="service-card-modern">
+            <div class="service-image-block">
+              <img src="images/Residential.jpg" alt="Residential">
+              <div class="service-overlay">
+                <span class="service-text">RESIDENTIAL</span>
+              </div>
+            </div>
+          </a>
+          <a href="commercial.html" class="service-card-modern">
+            <div class="service-image-block">
+              <img src="images/commercial.jpg" alt="Commercial">
+              <div class="service-overlay">
+                <span class="service-text">COMMERCIAL</span>
+              </div>
+            </div>
+          </a>
+          <a href="renovation.html" class="service-card-modern">
+            <div class="service-image-block">
+              <img src="images/Renovation.jpg" alt="Renovation">
+              <div class="service-overlay">
+                <span class="service-text">RENOVATION</span>
+              </div>
+            </div>
+          </a>
+          <a href="consultation.html" class="service-card-modern">
+            <div class="service-image-block">
+              <img src="images/consultation.jpg" alt="Consultation">
+              <div class="service-overlay">
+                <span class="service-text">CONSULTATION</span>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
-    </div><!-- End Service Item -->
+    </div>
   </section>
 
     <!-- Why Choose Us Section -->
-    <div class="why-choose-us">
-      <h2>Why Choose Us?</h2>
-      <p>We ensure peace of mind, trust, and transparent house construction.</p>
-      <div class="choose-us-cards">
-          <div class="choose-us-card">
-              <img src="https://grandjyothiconstruction.com/wp-content/uploads/2023/10/100-Vaastu-Homes.png" alt="100% Vaastu Homes">
+    <section class="why-choose-us-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Why Choose Us?</h2>
+          <p>We ensure peace of mind, trust, and transparent house construction.</p>
+        </div>
+        <div class="choose-us-cards-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="choose-us-card-modern">
+            <div class="card-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <div class="card-content">
               <h3>100% Vaastu Homes</h3>
-              <p>Dream spaces built to be 100% Vaastu compatible.</p>
+              <p>Dream spaces built to be 100% Vaastu compatible for prosperity and peace.</p>
+            </div>
           </div>
-          <div class="choose-us-card">
-              <img src="https://grandjyothiconstruction.com/wp-content/uploads/2023/10/Budget-Friendly.png" alt="Budget Friendly">
+          <div class="choose-us-card-modern">
+            <div class="card-icon">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+            <div class="card-content">
               <h3>Budget Friendly</h3>
-              <p>Delivering quality constructions that respect your budget.</p>
+              <p>Delivering quality constructions that respect your budget without compromise.</p>
+            </div>
           </div>
-          <div class="choose-us-card">
-              <img src="https://grandjyothiconstruction.com/wp-content/uploads/2023/10/On-Time-Delivery.png" alt="On-Time Delivery">
+          <div class="choose-us-card-modern">
+            <div class="card-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="card-content">
               <h3>On-Time Delivery</h3>
-              <p>Your dream home, delivered when promised.</p>
+              <p>Your dream home, delivered when promised with professional timeline management.</p>
+            </div>
           </div>
-          <div class="choose-us-card">
-              <img src="https://grandjyothiconstruction.com/wp-content/uploads/2023/10/100-Quality-construction.png" alt="100% Quality Construction">
-              <h3>100% Quality Construction</h3>
-              <p>Building high-quality spaces that meet all standards.</p>
+          <div class="choose-us-card-modern">
+            <div class="card-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <div class="card-content">
+              <h3>Quality Construction</h3>
+              <p>Building high-quality spaces that meet all international standards and regulations.</p>
+            </div>
           </div>
-      </div> 
-
-  <!-- how-to-start -->
-  <section class="how-to-start-section">
-    <h2>How to Start</h2>
-    <p>Follow these four simple steps to get started on your journey with our platform and make the most of the opportunities available.</p>
-    <div class="steps-container" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
-        <div class="step" style="margin: 20px; text-align: center; flex: 1 1 200px;">
-            <div class="step-icon">📅</div>
-            <h3>Step 1: Book an Appointment</h3>
-            <p>Schedule a Consultation with Our Architectural and Engineering Visionaries.</p>
-        </div>
-        <div class="step" style="margin: 20px; text-align: center; flex: 1 1 200px;">
-            <div class="step-icon">💬</div>
-            <h3>Step 2: Discuss Your Project</h3>
-            <p>Design Your Dreams - Let's Talk Blueprint, Requirement, Site condition, and others.</p>
-        </div>
-        <div class="step" style="margin: 20px; text-align: center; flex: 1 1 200px;">
-            <div class="step-icon">💰</div>
-            <h3>Step 3: Get Budgetary Quote</h3>
-            <p>Your Vision, Your Budget - Explore the Financial Blueprint and Discover the Cost.</p>
-        </div>
-        <div class="step" style="margin: 20px; text-align: center; flex: 1 1 200px;">
-            <div class="step-icon">🔨</div>
-            <h3>Step 4: Start Your Project</h3>
-            <p>Laying the Foundation of Your Dreams - Let's Begin Building.</p>
         </div>
       </div>
+    </section> 
+
+  <!-- How to Start Section -->
+  <section class="how-to-start-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>How to Start</h2>
+        <p>Follow these four simple steps to get started on your construction journey and make the most of our professional services.</p>
+      </div>
+      <div class="steps-cards-container" data-aos="fade-up" data-aos-delay="100">
+        <div class="step-card-modern">
+          <div class="step-number">01</div>
+          <div class="step-icon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <div class="step-content">
+            <h3>Book an Appointment</h3>
+            <p>Schedule a consultation with our architectural and engineering visionaries to discuss your project.</p>
+          </div>
+        </div>
+        <div class="step-card-modern">
+          <div class="step-number">02</div>
+          <div class="step-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <div class="step-content">
+            <h3>Discuss Your Project</h3>
+            <p>Design your dreams - let's talk blueprint, requirements, site conditions, and other specifications.</p>
+          </div>
+        </div>
+        <div class="step-card-modern">
+          <div class="step-number">03</div>
+          <div class="step-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <div class="step-content">
+            <h3>Get Budgetary Quote</h3>
+            <p>Your vision, your budget - explore the financial blueprint and discover the estimated cost.</p>
+          </div>
+        </div>
+        <div class="step-card-modern">
+          <div class="step-number">04</div>
+          <div class="step-icon">
+            <i class="fas fa-hammer"></i>
+          </div>
+          <div class="step-content">
+            <h3>Start Your Project</h3>
+            <p>Laying the foundation of your dreams - let's begin building your perfect space together.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>      
 
-  <!-- ======= Our Projects Section ======= -->
-  <section id="projects" class="projects">
+  <!-- ======= Our Packages Section ======= -->
+  <section id="packages" class="packages-section">
     <div class="container" data-aos="fade-up">
-      <div class="section-header">
-        <h2>Our Projects</h2>
-        <p class="quote">"Discover our exceptional portfolio, showcasing both ongoing and completed projects that reflect our dedication to quality and innovation in construction. From stunning remodels to landmark structures, we bring visions to life with precision and craftsmanship."</p>
+      <!-- Section Header -->
+      <div class="section-header text-center mb-5">
+        <h2>PACKAGES</h2>
+        <h3>CONSTRUCTION PACKAGES</h3>
       </div>
-      <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">ALL</li>
-            <li data-filter=".filter-remodeling">Ongoing-Projects</li>
-            <li data-filter=".filter-construction">Completed-Projects</li>
-          </ul>
+
+      <!-- Packages List -->
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-8">
+          <div class="packages-list">
+            <div class="package-item" data-aos="fade-up" data-aos-delay="100">
+              <a href="packages.html#gold" class="package-link">
+                <span class="package-name">Gold</span>
+                <span class="package-price">â‚¹1900/sq.ft (Incl.GST)</span>
+              </a>
+            </div>
+            
+            <div class="package-item" data-aos="fade-up" data-aos-delay="200">
+              <a href="packages.html#diamond" class="package-link">
+                <span class="package-name">Diamond</span>
+                <span class="package-price">â‚¹2100/sq.ft (Incl.GST)</span>
+              </a>
+            </div>
+            
+            <div class="package-item" data-aos="fade-up" data-aos-delay="300">
+              <a href="packages.html#platinum" class="package-link">
+                <span class="package-name">Platinum</span>
+                <span class="package-price">â‚¹2800/sq.ft (Incl.GST)</span>
+              </a>
+            </div>
+          </div>
+          
+          <!-- View All Packages Button -->
+          <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="400">
+            <a href="packages.html" class="btn btn-primary btn-lg">
+              View All Package Details
+            </a>
+          </div>
         </div>
-        <!-- Portfolio Item 1 -->
-        <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
-          <div class="portfolio-content h-100">
-            <div class="project-image">
-              <div class="carousel">
-                <img src="images/CONSTRUCTION_1/1.1.jpg" class="img-fluid" alt="">
-                <img src="images/CONSTRUCTION_1/2.2.jpg" class="img-fluid" alt="">
-                <img src="images/CONSTRUCTION_1/3.jpg" class="img-fluid" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Our Projects Section ======= -->
+  <section id="projects" class="projects-section-modern">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header-modern">
+        <h2>Our Projects</h2>
+        <p class="quote-modern">"Discover our exceptional portfolio, showcasing both ongoing and completed projects that reflect our dedication to quality and innovation in construction. From stunning remodels to landmark structures, we bring visions to life with precision and craftsmanship."</p>
+      </div>
+      
+      <div class="projects-filters-modern" data-aos="fade-up" data-aos-delay="100">
+        <button class="filter-btn-modern active" data-filter="*">ALL</button>
+        <button class="filter-btn-modern" data-filter=".filter-ongoing">Ongoing Projects</button>
+        <button class="filter-btn-modern" data-filter=".filter-completed">Completed Projects</button>
+      </div>
+      
+      <div class="projects-grid-modern" data-aos="fade-up" data-aos-delay="200">
+        <!-- Project Card 1 -->
+        <div class="project-card-modern filter-ongoing">
+          <div class="project-image-modern">
+            <div class="image-carousel">
+              <img src="images/CONSTRUCTION_1/1.1.jpg" class="img-fluid active" alt="Project Image">
+              <img src="images/CONSTRUCTION_1/2.2.jpg" class="img-fluid" alt="Project Image">
+              <img src="images/CONSTRUCTION_1/3.jpg" class="img-fluid" alt="Project Image">
+            </div>
+            <div class="project-overlay">
+              <div class="project-status ongoing">Ongoing</div>
+              <div class="project-actions">
+                <a href="images/CONSTRUCTION_1/1.1.jpg" class="action-btn glightbox" title="View Gallery">
+                  <i class="fas fa-eye"></i>
+                </a>
+                <a href="project-details.html" class="action-btn" title="Project Details">
+                  <i class="fas fa-info-circle"></i>
+                </a>
               </div>
             </div>
-            <div class="portfolio-info">
-              <p><strong>Client:</strong> John Doe</p>
-              <p><strong>Site Dimension:</strong> 50*30</p>
-              <p><strong>Category:</strong> 4 BHK Luxury house</p>
-              <p><strong>Location:</strong> Bellary,Karnataka</p>
-              <a href="assets/img/projects/remodeling-1.jpg" title="Remodeling 1" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+          <div class="project-info-modern">
+            <h3>4 BHK Luxury House</h3>
+            <div class="project-details">
+              <div class="detail-item">
+                <i class="fas fa-user"></i>
+                <span>John Doe</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-ruler-combined"></i>
+                <span>50Ã—30</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Bellary, Karnataka</span>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Portfolio Item 2 -->
-        <div class="col-lg-4 col-md-6 portfolio-item filter-construction">
-          <div class="portfolio-content h-100">
-            <div class="project-image">
-              <div class="carousel">
-                <img src="images/CONSTRUCTION_2/1.jpg" class="img-fluid" alt="">
-                <img src="images/CONSTRUCTION_2/2.jpg" class="img-fluid" alt="">
-                <img src="images/CONSTRUCTION_2/WhatsApp Image 2024-12-30 at 21.10.13_81c2aa2b.jpg" class="img-fluid" alt="">
-                <img src="images/CONSTRUCTION_2/WhatsApp Image 2024-12-30 at 21.10.13_f0540816.jpg" class="img-fluid" alt="">
-                <img src="images/CONSTRUCTION_2/WhatsApp Image 2024-12-30 at 21.10.14_5f0226e3.jpg" class="img-fluid" alt="">
-                <img src="images/CONSTRUCTION_2/WhatsApp Image 2024-12-30 at 21.10.14_871a931d.jpg" class="img-fluid" alt="">
-                <img src="images/CONSTRUCTION_2/WhatsApp Image 2024-12-30 at 21.10.14_8d392448.jpg" class="img-fluid" alt="">
+
+        <!-- Project Card 2 -->
+        <div class="project-card-modern filter-completed">
+          <div class="project-image-modern">
+            <div class="image-carousel">
+              <img src="images/CONSTRUCTION_2/1.jpg" class="img-fluid active" alt="Project Image">
+              <img src="images/CONSTRUCTION_2/2.jpg" class="img-fluid" alt="Project Image">
+              <img src="images/CONSTRUCTION_2/WhatsApp Image 2024-12-30 at 21.10.13_81c2aa2b.jpg" class="img-fluid" alt="Project Image">
+            </div>
+            <div class="project-overlay">
+              <div class="project-status completed">Completed</div>
+              <div class="project-actions">
+                <a href="images/CONSTRUCTION_2/1.jpg" class="action-btn glightbox" title="View Gallery">
+                  <i class="fas fa-eye"></i>
+                </a>
+                <a href="project-details.html" class="action-btn" title="Project Details">
+                  <i class="fas fa-info-circle"></i>
+                </a>
               </div>
             </div>
-            <div class="portfolio-info">
-              <h4>Construction 2</h4>
-              <p>Lorem ipsum, dolor sit amet consectetur</p>
-              <p><strong>Client:</strong> Jane Doe</p>
-              <p><strong>Location:</strong> Los Angeles, USA</p>
-              <p><strong>Category:</strong> Construction</p>
-              <a href="images/CONSTRUCTION_2/1.jpg" title="Construction 1" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+          <div class="project-info-modern">
+            <h3>Modern Construction Project</h3>
+            <div class="project-details">
+              <div class="detail-item">
+                <i class="fas fa-user"></i>
+                <span>Jane Doe</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-building"></i>
+                <span>Construction</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Los Angeles, USA</span>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Portfolio Item 3 -->
-        <div class="col-lg-4 col-md-6 portfolio-item filter-repairs">
-          <div class="portfolio-content h-100">
-            <div class="project-image">
-              <div class="carousel">
-                <img src="images/CONSTRUCTION_3/1.png" class="img-fluid" alt="">
-                <img src="images/CONSTRUCTION_3/2.jpg" class="img-fluid" alt="">
-                <img src="images/CONSTRUCTION_3/3.jpg" class="img-fluid" alt="">
-                <img src="images/CONSTRUCTION_3/4.jpg" class="img-fluid" alt="">
-                <img src="images/CONSTRUCTION_3/5.jpg" class="img-fluid" alt="">
-                <img src="images/CONSTRUCTION_3/6.jpg" class="img-fluid" alt="">
+
+        <!-- Project Card 3 -->
+        <div class="project-card-modern filter-completed">
+          <div class="project-image-modern">
+            <div class="image-carousel">
+              <img src="images/CONSTRUCTION_3/1.png" class="img-fluid active" alt="Project Image">
+              <img src="images/CONSTRUCTION_3/2.jpg" class="img-fluid" alt="Project Image">
+              <img src="images/CONSTRUCTION_3/3.jpg" class="img-fluid" alt="Project Image">
+            </div>
+            <div class="project-overlay">
+              <div class="project-status completed">Completed</div>
+              <div class="project-actions">
+                <a href="images/CONSTRUCTION_3/1.png" class="action-btn glightbox" title="View Gallery">
+                  <i class="fas fa-eye"></i>
+                </a>
+                <a href="project-details.html" class="action-btn" title="Project Details">
+                  <i class="fas fa-info-circle"></i>
+                </a>
               </div>
             </div>
-            <div class="portfolio-info">
-              <h4>Construction 3</h4>
-              <p>Lorem ipsum, dolor sit amet consectetur</p>
-              <p><strong>Client:</strong> Bob Smith</p>
-              <p><strong>Location:</strong> Chicago, USA</p>
-              <p><strong>Category:</strong> Repairs</p>
-              <a href="images/CONSTRUCTION_3/1.png" title="Repairs 1" data-gallery="portfolio-gallery-repairs" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+          <div class="project-info-modern">
+            <h3>Residential Complex</h3>
+            <div class="project-details">
+              <div class="detail-item">
+                <i class="fas fa-user"></i>
+                <span>Bob Smith</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-wrench"></i>
+                <span>Renovation</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Chicago, USA</span>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Portfolio Item 4 -->
-        <div class="col-lg-4 col-md-6 portfolio-item filter-design">
-          <div class="portfolio-content h-100">
-            <div class="project-image">
-              <div class="carousel">
-                <img src="assets/img/projects/design-1.jpg" class="img-fluid" alt="">
-                <img src="assets/img/projects/design-2.jpg" class="img-fluid" alt="">
-                <img src="assets/img/projects/design-3.jpg" class="img-fluid" alt="">
+
+        <!-- Project Card 4 -->
+        <div class="project-card-modern filter-ongoing">
+          <div class="project-image-modern">
+            <div class="image-carousel">
+              <img src="images/INTERIOR DESIGN/09.png" class="img-fluid active" alt="Project Image">
+              <img src="images/INTERIOR DESIGN/10.png" class="img-fluid" alt="Project Image">
+              <img src="images/INTERIOR DESIGN/11.png" class="img-fluid" alt="Project Image">
+            </div>
+            <div class="project-overlay">
+              <div class="project-status ongoing">Ongoing</div>
+              <div class="project-actions">
+                <a href="images/INTERIOR DESIGN/09.png" class="action-btn glightbox" title="View Gallery">
+                  <i class="fas fa-eye"></i>
+                </a>
+                <a href="project-details.html" class="action-btn" title="Project Details">
+                  <i class="fas fa-info-circle"></i>
+                </a>
               </div>
             </div>
-            <div class="portfolio-info">
-              <h4>Design 1</h4>
-              <p>Lorem ipsum, dolor sit amet consectetur</p>
-              <p><strong>Client:</strong> Alice Johnson</p>
-              <p><strong>Location:</strong> San Francisco, USA</p>
-              <p><strong>Category:</strong> Design</p>
-              <a href="assets/img/projects/design-1.jpg" title="Design 1" data-gallery="portfolio-gallery-design" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+          <div class="project-info-modern">
+            <h3>Interior Design Project</h3>
+            <div class="project-details">
+              <div class="detail-item">
+                <i class="fas fa-user"></i>
+                <span>Alice Johnson</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-palette"></i>
+                <span>Design</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>San Francisco, USA</span>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Portfolio Item 5 -->
-        <div class="col-lg-4 col-md-6 portfolio-item filter-consultation">
-          <div class="portfolio-content h-100">
-            <div class="project-image">
-              <div class="carousel">
-                <img src="images/exterior_design.jpg" class="img-fluid" alt="">
-                <img src="images/commercial.jpg" class="img-fluid" alt="">
-                <img src="images/facade-modern-house.jpg" class="img-fluid" alt="">
+
+        <!-- Project Card 5 -->
+        <div class="project-card-modern filter-completed">
+          <div class="project-image-modern">
+            <div class="image-carousel">
+              <img src="images/exterior_design.jpg" class="img-fluid active" alt="Project Image">
+              <img src="images/commercial.jpg" class="img-fluid" alt="Project Image">
+              <img src="images/facade-modern-house.jpg" class="img-fluid" alt="Project Image">
+            </div>
+            <div class="project-overlay">
+              <div class="project-status completed">Completed</div>
+              <div class="project-actions">
+                <a href="images/exterior_design.jpg" class="action-btn glightbox" title="View Gallery">
+                  <i class="fas fa-eye"></i>
+                </a>
+                <a href="project-details.html" class="action-btn" title="Project Details">
+                  <i class="fas fa-info-circle"></i>
+                </a>
               </div>
             </div>
-            <div class="portfolio-info">
-              <h4>Consultation 1</h4>
-              <p>Lorem ipsum, dolor sit amet consectetur</p>
-              <p><strong>Client:</strong> Mike Brown</p>
-              <p><strong>Location:</strong> New York, USA</p>
-              <p><strong>Category:</strong> Consultation</p>
-              <a href="assets/img/projects/consultation-1.jpg" title="Consultation 1" data-gallery="portfolio-gallery-consultation" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+          <div class="project-info-modern">
+            <h3>Consultation Services</h3>
+            <div class="project-details">
+              <div class="detail-item">
+                <i class="fas fa-user"></i>
+                <span>Mike Brown</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-comments"></i>
+                <span>Consultation</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>New York, USA</span>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Portfolio Item 6 -->
-        <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
-          <div class="portfolio-content h-100">
-            <div class="project-image">
-              <div class="carousel">
-                <img src="assets/img/projects/remodeling-2.jpg" class="img-fluid" alt="">
-                <img src="assets/img/projects/remodeling-3.jpg" class="img-fluid" alt="">
-                <img src="assets/img/projects/remodeling-4.jpg" class="img-fluid" alt="">
+
+        <!-- Project Card 6 -->
+        <div class="project-card-modern filter-ongoing">
+          <div class="project-image-modern">
+            <div class="image-carousel">
+              <img src="images/RENOVATION/DSC_0161.JPG" class="img-fluid active" alt="Project Image">
+              <img src="images/RENOVATION/DSC_0162.JPG" class="img-fluid" alt="Project Image">
+              <img src="images/RENOVATION/DSC_0163.JPG" class="img-fluid" alt="Project Image">
+            </div>
+            <div class="project-overlay">
+              <div class="project-status ongoing">Ongoing</div>
+              <div class="project-actions">
+                <a href="images/RENOVATION/DSC_0161.JPG" class="action-btn glightbox" title="View Gallery">
+                  <i class="fas fa-eye"></i>
+                </a>
+                <a href="project-details.html" class="action-btn" title="Project Details">
+                  <i class="fas fa-info-circle"></i>
+                </a>
               </div>
             </div>
-            <div class="portfolio-info">
-              <h4>Remodeling 2</h4>
-              <p>Lorem ipsum, dolor sit amet consectetur</p>
-              <p><strong>Client:</strong> Sarah Lee</p>
-              <p><strong>Location:</strong> Miami, USA</p>
-              <p><strong>Category:</strong> Remodeling</p>
-              <a href="assets/img/projects/remodeling-2.jpg" title="Remodeling 2" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+          </div>
+          <div class="project-info-modern">
+            <h3>Home Remodeling</h3>
+            <div class="project-details">
+              <div class="detail-item">
+                <i class="fas fa-user"></i>
+                <span>Sarah Lee</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-home"></i>
+                <span>Remodeling</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Miami, USA</span>
+              </div>
             </div>
           </div>
         </div>
@@ -1048,7 +2634,7 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  We were impressed with the quality of work and the attention to detail that SRI GURU CONSTRUCTIONS provided for our commercial project. 
+                  We were impressed with the quality of work and the attention to detail that SRI GURU CONSTRUCTION & INTERIORS provided for our commercial project. 
                   Their team was responsive, communicated clearly, and always went the extra mile to ensure our satisfaction
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
@@ -1068,7 +2654,7 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  SRI GURU CONSTRUCTIONS exceeded my expectations! Their team was professional, efficient, and incredibly helpful throughout the entire process. 
+                  SRI GURU CONSTRUCTION & INTERIORS exceeded my expectations! Their team was professional, efficient, and incredibly helpful throughout the entire process. 
                   I highly recommend them to anyone looking for a reliable and trustworthy construction company.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
@@ -1137,7 +2723,7 @@
             </div>
             <div class="col-md-4">
                 <div class="video-container">
-                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/videoseries?list=UU_x5XG1OV2P6uZZ5FSM9Ttw" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -1268,7 +2854,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
-              <h3>SRI GURU CONSTRUCTIONS</h3>
+              <h3>SRI GURU CONSTRUCTION & INTERIORS</h3>
               <p>
                 Bellary <br>
                 Karnataka,583101<br><br>
@@ -1276,10 +2862,10 @@
                 <strong>Email:</strong> srigurunstructions@gmail.com<br>
               </p>
               <div class="social-links d-flex mt-3">
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+                <a href="https://x.com/SRIGURUBALLARI?t=zPbH2nMmY1L3iWlRigHGrg&s=09" class="d-flex align-items-center justify-content-center" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/share/1G8xmAV1fe/" class="d-flex align-items-center justify-content-center" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/sriguruconstruction_interiors?utm_source=qr&igsh=MXUxeXFtY3U4a3g5aw==" class="d-flex align-items-center justify-content-center" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/posts/sri-guru-construction-interiors_construction-interiors-ballari-activity-7369368902499254273-5vkv?utm_source=share&utm_medium=member_android&rcm=ACoAAC0hD0YBMrR6lHUBa6DHuTX8ilPDUBI9nIo" class="d-flex align-items-center justify-content-center" target="_blank"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div><!-- End footer info column-->
@@ -1290,7 +2876,7 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About us</a></li>
               <li><a href="services.html">Services</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="contact_us.html">Contact Us</a></li>
               <li><a href="#">Terms of service</a></li>
               <li><a href="#">Privacy policy</a></li>
             </ul>
@@ -1325,7 +2911,7 @@
             <h4>Support</h4>
             <ul>
               <li><a href="consultation.html">Consultation</a></li>
-              <li><a href="contact.html">Get Quote</a></li>
+              <li><a href="contact_us.html">Get Quote</a></li>
               <li><a href="#">Customer Support</a></li>
               <li><a href="#">FAQ</a></li>
               <li><a href="#">Help Center</a></li>
@@ -1343,7 +2929,7 @@
     <div class="footer-legal text-center position-relative">
       <div class="container">
         <div class="copyright">
-          &copy; Copyright <strong><span>SRI GURU CONSTRUCTIONS</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>SRI GURU CONSTRUCTION & INTERIORS</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
@@ -1401,29 +2987,76 @@
     });
 
     document.addEventListener('DOMContentLoaded', function () {
-    const mobileNavShow = document.querySelector('.mobile-nav-show');
-    const mobileNavHide = document.querySelector('.mobile-nav-hide');
-    const navbar = document.querySelector('.navbar');
+      const mobileNavShow = document.querySelector('.mobile-nav-show');
+      const mobileNavHide = document.querySelector('.mobile-nav-hide');
+      const navbar = document.querySelector('.navbar');
 
-    mobileNavShow.addEventListener('click', function () {
-      navbar.classList.add('mobile-nav-active');
-    });
+      // Mobile navigation toggle functionality
+      if (mobileNavShow) {
+        mobileNavShow.addEventListener('click', function () {
+          document.body.classList.add('mobile-nav-active');
+          mobileNavShow.classList.add('d-none');
+          mobileNavHide.classList.remove('d-none');
+        });
+      }
+      
+      if (mobileNavHide) {
+        mobileNavHide.addEventListener('click', function () {
+          document.body.classList.remove('mobile-nav-active');
+          mobileNavShow.classList.remove('d-none');
+          mobileNavHide.classList.add('d-none');
+        });
+      }
 
-    mobileNavHide.addEventListener('click', function () {
-      navbar.classList.remove('mobile-nav-active');
-    });
-
-    document.querySelectorAll('.navbar .dropdown > a').forEach(function (dropdown) {
-      dropdown.addEventListener('click', function (e) {
-        if (navbar.classList.contains('mobile-nav-active')) {
-          e.preventDefault();
-          this.nextElementSibling.classList.toggle('dropdown-active');
+      // Dropdown functionality
+      document.querySelectorAll('.navbar .dropdown > a').forEach(function (dropdown) {
+        dropdown.addEventListener('click', function (e) {
+          // For mobile navigation
+          if (document.body.classList.contains('mobile-nav-active')) {
+            e.preventDefault();
+            const parentDropdown = this.parentElement;
+            
+            // Close other dropdowns
+            document.querySelectorAll('.navbar .dropdown').forEach(function(otherDropdown) {
+              if (otherDropdown !== parentDropdown) {
+                otherDropdown.classList.remove('dropdown-active');
+              }
+            });
+            
+            // Toggle current dropdown
+            parentDropdown.classList.toggle('dropdown-active');
+            
+            // Toggle dropdown indicator
+            const indicator = this.querySelector('.dropdown-indicator');
+            if (indicator) {
+              indicator.classList.toggle('bi-chevron-down');
+              indicator.classList.toggle('bi-chevron-up');
+            }
+          }
+          // For desktop, let CSS handle hover
+        });
+      });
+      
+      // Close mobile nav when clicking outside
+      document.addEventListener('click', function(e) {
+        const navbar = document.querySelector('.navbar');
+        const mobileNavShow = document.querySelector('.mobile-nav-show');
+        const mobileNavHide = document.querySelector('.mobile-nav-hide');
+        
+        if (!navbar.contains(e.target) && !mobileNavShow.contains(e.target) && !mobileNavHide.contains(e.target)) {
+          if (document.body.classList.contains('mobile-nav-active')) {
+            document.body.classList.remove('mobile-nav-active');
+            mobileNavShow.classList.remove('d-none');
+            mobileNavHide.classList.add('d-none');
+            
+            // Close all dropdowns
+            document.querySelectorAll('.navbar .dropdown').forEach(function(dropdown) {
+              dropdown.classList.remove('dropdown-active');
+            });
+          }
         }
       });
-
-      
     });
-  });
 
     // Contact Notification Popup functionality
     document.addEventListener('DOMContentLoaded', function () {
@@ -1478,3 +3111,4 @@
   </script>
 </body>
 </html>
+
